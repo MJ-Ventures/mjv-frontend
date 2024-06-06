@@ -1,4 +1,5 @@
 import { ArrowIcon, Logo } from "@/assets/svgs";
+import Link from "next/link";
 
 const navMenu = [
   { text: "about us", link: "/#about-us" },
@@ -16,8 +17,11 @@ export default function Header() {
         {navMenu.map((item, index) => {
           const { text, link } = item;
           return (
-            <div key={index} className="flex gap-1.5 items-center cursor-pointer">
-              <p className="capitalize">{text}</p>
+            <div
+              key={index}
+              className="flex gap-1.5 items-center cursor-pointer"
+            >
+              <p className="capitalize"><Link href={link}>{text}</Link></p>
               {text === "blog" && <ArrowIcon className="" />}
             </div>
           );
