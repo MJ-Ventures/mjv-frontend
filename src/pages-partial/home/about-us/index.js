@@ -26,9 +26,9 @@ export default function AboutUs() {
             <div className="grid grid-cols-2 gap-8 pt-8">
               {Array(4)
                 .fill()
-                .map(() => {
+                .map((ele,index) => {
                   return (
-                    <div className="py-8 px-6 space-y-4 bg-[#151515] border border-[#292929]">
+                    <div key={index} className="py-8 px-6 space-y-4 bg-[#151515] border border-[#292929]">
                       <h4>Visionary Planning</h4>
                       <p className="text-[#A5A5A1]">
                         Lorem ipsum dolor sit amet consectetur. Dignissim dictum
@@ -43,7 +43,7 @@ export default function AboutUs() {
           </div>
           <div className="pb-10 text-center">
             <button className="py-3 px-8 rounded-lg bg-[#151515] border border-[#292929]">
-              Let's Collaborate
+              Let&apos;s Collaborate
             </button>
           </div>
         </div>
