@@ -15,7 +15,7 @@
     --background-end-rgb: 0, 0, 0;
   }
 }
-*{
+* {
   scroll-behavior: smooth;
 }
 body {
@@ -32,4 +32,47 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+@keyframes slide-up {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  10% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+  90% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+}
+
+.slide-up {
+  animation: slide-up 2s linear infinite;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scroll {
+  display: flex;
+  white-space: nowrap;
+  animation: scroll 20s linear infinite;
+}
+
+.animate-scroll > div {
+  white-space: normal; /* Ensure text wraps inside each card */
+  box-sizing: border-box; /* Include padding and border in element's total width and height */
 }

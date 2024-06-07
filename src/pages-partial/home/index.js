@@ -1,4 +1,5 @@
 import AboutUs from "./about-us";
+import BlogSection from "./blog";
 import CaseStudies from "./case-studies";
 import FaqSection from "./faq";
 import Header from "./header";
@@ -6,6 +7,7 @@ import Hero from "./hero";
 import OurServices from "./our-services";
 import OurTeam from "./our-team";
 import PartnerSection from "./partners";
+import Testimonials from "./testimonials";
 
 export default function Home() {
   return (
@@ -18,6 +20,8 @@ export default function Home() {
       <OurServices />
       <FaqSection />
       <OurTeam />
+      <Testimonials />
+      <BlogSection />
     </main>
   );
 }

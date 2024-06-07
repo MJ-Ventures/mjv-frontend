@@ -1,6 +1,7 @@
 import ArrowIcon from "./arrow-icon";
 import BoltShiftIcon from "./bolt-shift";
 import BulbIcon from "./bulb-icon";
+import CommasIcon from "./commas-icon";
 import FeatherDevIcon from "./feather-dev";
 import GlobalBankIcon from "./global-bank";
 import LightBoxIcon from "./light-box";
@@ -15,4 +16,5 @@ export {
   GlobalBankIcon,
   SpheruleIcon,
   BulbIcon,
+  CommasIcon
 };

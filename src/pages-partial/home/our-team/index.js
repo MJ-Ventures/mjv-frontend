@@ -28,7 +28,7 @@ const team = [
 
 export default function OurTeam() {
   return (
-    <section className="w-full py-12" id="our-team">
+    <section className="w-full py-12 border-b border-white/10" id="our-team">
       <div className="py-[100px] px-[120px] w-full flex flex-col gap-6">
         <h5 className="text-center text-base font-medium leading-[22px] tracking-[6px]">
           – OUR TEAM –
@@ -60,7 +60,7 @@ export default function OurTeam() {
           );
         })}
       </div>
-      <div className="py-24 text-center">
+      <div className="py-12 text-center">
         <button className="py-3 px-8 rounded-lg bg-[#151515] border border-[#292929]">
           Get in Touch
         </button>

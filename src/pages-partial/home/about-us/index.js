@@ -1,3 +1,10 @@
+const data = [
+  {title: 'Visionary Planning'},
+  {title: 'INITIAL IMPACT'},
+  {title: 'RAPID VALUE CREATION'},
+  {title: 'SCALING INNOVATION'},
+]
+
 export default function AboutUs() {
   return (
     <section className="relative border-b border-white/10" id="about-us">
@@ -24,12 +31,12 @@ export default function AboutUs() {
           <div className="my-16 mx-0">
             <h5 className="text-xl text-center">How We Collaborate with You</h5>
             <div className="grid grid-cols-2 gap-8 pt-8">
-              {Array(4)
-                .fill()
-                .map((ele,index) => {
+              {data
+                .map((element,index) => {
+                  const { title} = element
                   return (
                     <div key={index} className="py-8 px-6 space-y-4 bg-[#151515] border border-[#292929]">
-                      <h4>Visionary Planning</h4>
+                      <h4 className="uppercase">{title}</h4>
                       <p className="text-[#A5A5A1]">
                         Lorem ipsum dolor sit amet consectetur. Dignissim dictum
                         scelerisque dictumst integer purus pharetra felis.
