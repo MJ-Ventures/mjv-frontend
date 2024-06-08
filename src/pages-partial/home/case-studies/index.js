@@ -60,23 +60,23 @@ export default function CaseStudies() {
   const slidesPerView = 3;
 
   return (
-    <div className="py-24 bg-black text-white">
+    <div className="py-24 bg-black px-2 text-white">
       <div className="relative">
         <div>
-          <h5 className=" text-base font-medium leading-[22px] tracking-[6px]">
-            – OUR CASE STUDIES
+          <h5 className="text-base md:text-start text-center font-medium leading-[22px] tracking-[6px]">
+            – OUR CASE STUDIES <span className="md:hidden inline text-base">–</span>
           </h5>
-          <h5 className="font-semibold text-3xl md:text-4xl leading-[52px] text-white mt-3">
+          <h5 className="font-semibold  md:text-start text-center text-xl md:text-4xl nd:leading-[52px] leading-[30px] text-white mt-3">
             GET INSIGHT INTO THE MANY POSSIBILITIES!
           </h5>
-          <div className="flex justify-between items-center mt-4">
-            <p className="text-base font-normal leading-8">
+          <div className="flex md:flex-row flex-col justify-between items-center mt-4">
+            <p className="text-base font-normal md:text-start text-center md:leading-8 leading-6">
               Our team has spent years building software products for political
-              campaigns and non-profits. <br /> We’ve learned, sometimes the
+              campaigns and non-profits. <br className="md:inline hidden" /> We’ve learned, sometimes the
               hard way, that small orgs need to build smarter tech to stay
               competitive.{" "}
             </p>
-            <div className="flex items-center gap-x-8">
+            <div className="flex items-center md:pt-0 pt-3 gap-x-8">
               <div
                 onClick={() => {
                   if (activeIndex !== 0) {
@@ -115,7 +115,21 @@ export default function CaseStudies() {
         onSlideChange={(e) => {
           setactiveIndex(e.activeIndex);
         }}
-        className="mt-16"
+        className="md:mt-16 mt-6"
+        breakpoints={{
+          640: {
+            slidesPerView: 1,
+            spaceBetween: 10,
+          },
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 10,
+          },
+          1024: {
+            slidesPerView: 3,
+            spaceBetween: 20,
+          },
+        }}
         slidesPerView={slidesPerView}
       >
         {data.map((ele, index) => {

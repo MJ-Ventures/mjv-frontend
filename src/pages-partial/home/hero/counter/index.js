@@ -1,5 +1,4 @@
 "use client";
-// components/TextCounter.js
 import { useEffect, useState } from "react";
 import { data } from "./data";
 
@@ -19,26 +18,11 @@ const TextCounter = () => {
   const getStyle = (idx) => {
     const distance = Math.abs((idx % items.length) - (index % items.length));
     if (distance === 0) {
-      return {
-        fontSize: "56px",
-        opacity: 1,
-        lineHeight: '5px',
-        fontWeight: '600',
-      };
+      return "lg:text-6xl text-3xl opacity-100 leading-tight font-semibold";
     } else if (distance === 1) {
-      return {
-        fontSize: "40px",
-        opacity: 0.5,
-        lineHeight: '5px',
-        fontWeight: '600',
-      };
+      return "text-4xl text-3xl opacity-50 leading-tight font-semibold";
     } else {
-      return {
-        fontSize: "30px",
-        opacity: 0.2,
-        lineHeight: '5px',
-        fontWeight: '600',
-      };
+      return "text-2xl text-xl opacity-20 leading-tight font-semibold";
     }
   };
 
@@ -50,14 +34,14 @@ const TextCounter = () => {
         return (
           <div
             key={idx}
-            className={`absolute flex h-[13%] items-center text-white justify-center text-start transition-transform duration-700 ${isTransitioning ? "transition-transform" : ""
-              }`}
+            className={`absolute flex md:h-[13%] h-10 items-center text-white justify-center text-start transition-transform duration-700 ${
+              isTransitioning ? "transition-transform" : ""
+            } ${getStyle(idx)}`}
             style={{
               transform: `translateY(${(idx - index) * 100}%)`,
               transition: isTransitioning
-                ? "transform 0.7s ease-in-out, font-size 0.7s ease-in-out, opacity 0.7s ease-in-out"
+                ? "transform 0.7s ease-in-out, 0.7s ease-in-out, opacity 0.7s ease-in-out"
                 : "none",
-              ...getStyle(idx),
               visibility: isVisible ? "visible" : "hidden", // Hide elements outside the visible range
             }}
           >
