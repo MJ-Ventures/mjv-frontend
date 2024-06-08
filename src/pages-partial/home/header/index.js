@@ -21,13 +21,13 @@ export default function Header() {
               key={index}
               className="flex gap-1.5 items-center cursor-pointer"
             >
-              <p className="capitalize"><Link href={link}>{text}</Link></p>
+              <p className="capitalize text-white"><Link href={link}>{text}</Link></p>
               {text === "blog" && <ArrowIcon className="" />}
             </div>
           );
         })}
       </div>
-      <button className="py-3 px-8 rounded-lg bg-[#151515] border border-[#292929]">
+      <button className="py-3 px-8 text-white rounded-lg bg-[#151515] border border-[#292929]">
         Contact Us
       </button>
     </header>

@@ -4,13 +4,13 @@ export default function Testimonials() {
   return (
     <section className="py-12 border-b border-white/10">
       <div className="max-w-[906px] m-16 mx-auto w-full flex flex-col gap-3">
-        <h5 className="text-center text-base font-medium leading-[22px] tracking-[6px]">
+        <h5 className="text-center  text-white text-base font-medium leading-[22px] tracking-[6px]">
           – Testimonials –
         </h5>
-        <h1 className="text-center text-[52px] font-semibold leading-relaxed">
+        <h1 className="text-center text-white text-[52px] font-semibold leading-relaxed">
           WHAT OUR CLIENTS SAY
         </h1>
-        <p className="text-center text-base font-normal leading-8">
+        <p className="text-center text-white text-base font-normal leading-8">
           View some feeback below made from our esteemed clients
         </p>
       </div>
@@ -43,7 +43,7 @@ export default function Testimonials() {
                           />
                         </span>
                         <div className="flex flex-col gap-1 items-start justify-center">
-                          <h4 className="text-lg font-semibold leading-none text-default-600">
+                          <h4 className="text-lg font-semibold text-white leading-none text-default-600">
                             Zoey Lang
                           </h4>
                           <h5 className="text-sm tracking-tight text-[#A5A5A1]">

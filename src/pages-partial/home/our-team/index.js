@@ -30,13 +30,13 @@ export default function OurTeam() {
   return (
     <section className="w-full py-12 border-b border-white/10" id="our-team">
       <div className="py-[100px] px-[120px] w-full flex flex-col gap-6">
-        <h5 className="text-center text-base font-medium leading-[22px] tracking-[6px]">
+        <h5 className="text-center text-base font-medium text-white leading-[22px] tracking-[6px]">
           – OUR TEAM –
         </h5>
-        <h1 className="text-center text-[52px] font-semibold leading-relaxed">
+        <h1 className="text-center text-[52px] font-semibold text-white leading-relaxed">
           MEET THE MJV TEAM{" "}
         </h1>
-        <p className="text-center text-base font-normal leading-8">
+        <p className="text-center text-base font-normal text-white leading-8">
           Our team has spent years building software products for political
           campaigns and non-profits. <br /> We’ve learned, sometimes the hard
           way, that small orgs need to build smarter tech to stay competitive.{" "}
@@ -51,7 +51,7 @@ export default function OurTeam() {
                 <img src={imgSrc} />
               </div>
               <div className="text-center py-2">
-                <p className="text-2xl leading-10 font-semibold">{fullName}</p>
+                <p className="text-2xl leading-10 font-semibold text-white">{fullName}</p>
                 <p className="text-xl leading-7 text-[#838381]">
                   {designation}
                 </p>
@@ -61,7 +61,7 @@ export default function OurTeam() {
         })}
       </div>
       <div className="py-12 text-center">
-        <button className="py-3 px-8 rounded-lg bg-[#151515] border border-[#292929]">
+        <button className="py-3 px-8 rounded-lg text-white bg-[#151515] border border-[#292929]">
           Get in Touch
         </button>
       </div>
