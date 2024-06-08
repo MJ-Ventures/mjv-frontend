@@ -20,33 +20,38 @@ const TextCounter = () => {
     const distance = Math.abs((idx % items.length) - (index % items.length));
     if (distance === 0) {
       return {
-        fontSize: "60px",
+        fontSize: "56px",
         opacity: 1,
+        lineHeight: '5px',
+        fontWeight: '600',
       };
     } else if (distance === 1) {
       return {
         fontSize: "40px",
-        opacity: 0.7,
+        opacity: 0.5,
+        lineHeight: '5px',
+        fontWeight: '600',
       };
     } else {
       return {
         fontSize: "30px",
-        opacity: 0.5,
+        opacity: 0.2,
+        lineHeight: '5px',
+        fontWeight: '600',
       };
     }
   };
 
   return (
-    <div className="relative h-full nax-w-max overflow-hidden flex flex-col items-center justify-center">
+    <div className="relative h-full nax-w-max overflow-hidden flex flex-col items-start justify-center">
       {items.map((item, idx) => {
         const distance = Math.abs(idx - index);
         const isVisible = distance <= 3; // Check if the item is within 3 positions from the active index
         return (
           <div
             key={idx}
-            className={`absolute flex h-[13%] items-center text-white justify-center text-start transition-transform duration-700 ${
-              isTransitioning ? "transition-transform" : ""
-            }`}
+            className={`absolute flex h-[13%] items-center text-white justify-center text-start transition-transform duration-700 ${isTransitioning ? "transition-transform" : ""
+              }`}
             style={{
               transform: `translateY(${(idx - index) * 100}%)`,
               transition: isTransitioning
