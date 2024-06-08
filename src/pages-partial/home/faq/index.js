@@ -11,14 +11,14 @@ export default function FaqSection() {
       <div className="py-[120px] px-[160px] w-full flex flex-col gap-6">
         <div className="flex ">
           <div className="w-3/4 space-y-4 flex-1">
-            <h1 className="text-[52px] uppercase leading-[67px] font-bold">
+            <h1 className="text-[52px] uppercase text-white leading-[67px] font-bold">
               Frequently asked questions ?
             </h1>
-            <p className="uppercase text-lg leading-7">
+            <p className="uppercase text-lg text-white leading-7">
               You’ve got question? <br />
               Here are some of the answers and answers from <br /> MJV TEAM
             </p>
-            <button className="py-4 my-6 px-14 rounded-lg bg-[#151515] border border-[#292929]">
+            <button className="py-4 my-6 px-14 text-white rounded-lg bg-[#151515] border border-[#292929]">
               Contact Us
             </button>
           </div>

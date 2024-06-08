@@ -43,21 +43,21 @@ export default function OurServices() {
   return (
     <section className="py-12" id="services">
       <div>
-        <h5 className=" text-base font-medium leading-[22px] tracking-[6px]">
+        <h5 className=" text-base text-white font-medium leading-[22px] tracking-[6px]">
           – OUR SERVICES
         </h5>
         <h5 className="font-semibold text-3xl md:text-4xl leading-[52px] text-white mt-3">
           HOW WE CAN <br /> HELP YOU
         </h5>
         <div className="flex justify-between items-center mt-4">
-          <p className="text-base w-[65%] font-normal leading-8">
+          <p className="text-base w-[65%] font-normal text-white leading-8">
             Lorem ipsum dolor sit amet consectetur. Cras leo ornare eget augue.
             Lacus eget enim cras sollicitudin. Viverra pharetra lorem sit nulla
             ultrices integer risus. Massa placerat leo vitae accumsan.
           </p>
         </div>
         <div className="py-4">
-          <button className="py-3 px-8 rounded-lg bg-[#151515] border border-[#292929]">
+          <button className="py-3 px-8 rounded-lg bg-[#151515] text-white border border-[#292929]">
             Get a Free Consultation!
           </button>
         </div>
@@ -75,10 +75,10 @@ export default function OurServices() {
                   {icon}
                 </div>
                 <div className="!mt-6 spac-y-3">
-                  <h3 className="text-[28px]">{title}</h3>
+                  <h3 className="text-[28px] text-white">{title}</h3>
                   <p className="mt-2 text-[#EAEAEB]">{description}</p>
                   <div className="flex items-center gap-4 pt-4">
-                    <p className="text-base leading-8">Get Started</p>
+                    <p className="text-base leading-8 text-white">Get Started</p>
                     <ArrowIcon
                       width={16}
                       height={16}

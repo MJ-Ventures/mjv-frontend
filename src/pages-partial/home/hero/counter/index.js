@@ -44,7 +44,7 @@ const TextCounter = () => {
         return (
           <div
             key={idx}
-            className={`absolute flex h-[13%] items-center justify-center text-start transition-transform duration-700 ${
+            className={`absolute flex h-[13%] items-center text-white justify-center text-start transition-transform duration-700 ${
               isTransitioning ? "transition-transform" : ""
             }`}
             style={{
