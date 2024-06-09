@@ -1,8 +1,10 @@
-const GlobalBankIcon = () => {
+const GlobalBankIcon = ({ height = 48, width = 197, className, ...props }) => {
   return (
     <svg
-      width={197}
-      height={48}
+      width={width}
+      height={height}
+      className={className}
+      {...props}
       viewBox="0 0 197 48"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"

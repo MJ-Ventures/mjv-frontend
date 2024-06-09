@@ -4,8 +4,15 @@ import BulbIcon from "./bulb-icon";
 import CommasIcon from "./commas-icon";
 import FeatherDevIcon from "./feather-dev";
 import GlobalBankIcon from "./global-bank";
+import LayerGroupIcon from "./layer-group-icon";
 import LightBoxIcon from "./light-box";
 import Logo from "./logo";
+import MinusIcon from "./minus-icon";
+import MobileIcon from "./mobile-icon";
+import PenToolIcon from "./pen-tool-icon";
+import PlusIcon from "./plus-icon";
+import PuzzleIcon from "./puzzle-icon";
+import SearchIcon from "./search-icon";
 import SpheruleIcon from "./spherule";
 export {
   Logo,
@@ -16,5 +23,12 @@ export {
   GlobalBankIcon,
   SpheruleIcon,
   BulbIcon,
-  CommasIcon
+  CommasIcon,
+  PuzzleIcon,
+  PenToolIcon,
+  LayerGroupIcon,
+  SearchIcon,
+  MobileIcon,
+  MinusIcon,
+  PlusIcon
 };

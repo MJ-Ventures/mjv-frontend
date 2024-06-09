@@ -1,4 +1,12 @@
-import { ArrowIcon, BulbIcon } from "@/assets/svgs";
+import {
+  ArrowIcon,
+  BulbIcon,
+  LayerGroupIcon,
+  PenToolIcon,
+  PuzzleIcon,
+  SearchIcon,
+  MobileIcon,
+} from "@/assets/svgs";
 
 const data = [
   {
@@ -11,31 +19,31 @@ const data = [
     title: "Software Development",
     description:
       "Lorem ipsum dolor sit amet consectetur. Cras leo ornare eget augue. Lacus eget enim cras",
-    icon: <BulbIcon />,
+    icon: <PuzzleIcon />,
   },
   {
     title: "UX/UI Design",
     description:
       "Lorem ipsum dolor sit amet consectetur. Cras leo ornare eget augue. Lacus eget enim cras",
-    icon: <BulbIcon />,
+    icon: <PenToolIcon />,
   },
   {
     title: "Product Strategy",
     description:
       "Lorem ipsum dolor sit amet consectetur. Cras leo ornare eget augue. Lacus eget enim cras",
-    icon: <BulbIcon />,
+    icon: <LayerGroupIcon />,
   },
   {
     title: "SEO",
     description:
       "Lorem ipsum dolor sit amet consectetur. Cras leo ornare eget augue. Lacus eget enim cras",
-    icon: <BulbIcon />,
+    icon: <SearchIcon />,
   },
   {
     title: "Mobile App Development",
     description:
       "Lorem ipsum dolor sit amet consectetur. Cras leo ornare eget augue. Lacus eget enim cras",
-    icon: <BulbIcon />,
+    icon: <MobileIcon />,
   },
 ];
 
@@ -43,27 +51,27 @@ export default function OurServices() {
   return (
     <section className="py-12" id="services">
       <div>
-        <h5 className=" text-base text-white font-medium leading-[22px] tracking-[6px]">
-          – OUR SERVICES
+        <h5 className="text-base text-white lg:text-start text-center font-medium lg:leading-[22px] leading-4 tracking-[6px]">
+          – OUR SERVICES <span className="lg:hidden inline">–</span>
         </h5>
-        <h5 className="font-semibold text-3xl md:text-4xl leading-[52px] text-white mt-3">
-          HOW WE CAN <br /> HELP YOU
+        <h5 className="font-semibold lg:text-3xl text-xl  lg:text-start text-center md:text-4xl lg:leading-[52px] leading-8 text-white mt-3">
+          HOW WE CAN <br className="lg:inline hidden" /> HELP YOU
         </h5>
-        <div className="flex justify-between items-center mt-4">
-          <p className="text-base w-[65%] font-normal text-white leading-8">
+        <div className="flex justify-between items-center mt-4 lg:px-0 px-3">
+          <p className="text-base lg:w-[65%] w-full font-normal lg:text-start text-center text-white lg:leading-8 leading-6">
             Lorem ipsum dolor sit amet consectetur. Cras leo ornare eget augue.
             Lacus eget enim cras sollicitudin. Viverra pharetra lorem sit nulla
             ultrices integer risus. Massa placerat leo vitae accumsan.
           </p>
         </div>
-        <div className="py-4">
-          <button className="py-3 px-8 rounded-lg bg-[#151515] text-white border border-[#292929]">
+        <div className="py-4 lg:px-0 px-3">
+          <button className="py-3 px-8 lg:max-w-max w-full rounded-lg bg-[#151515] text-white border border-[#292929]">
             Get a Free Consultation!
           </button>
         </div>
       </div>
       <div>
-        <div className="grid grid-cols-1 gap-4 mt-8 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-4 mt-8 lg:px-0 px-3 sm:grid-cols-2 lg:grid-cols-3">
           {data.map((element, index) => {
             const { description, icon, title } = element;
             return (
@@ -78,7 +86,9 @@ export default function OurServices() {
                   <h3 className="text-[28px] text-white">{title}</h3>
                   <p className="mt-2 text-[#EAEAEB]">{description}</p>
                   <div className="flex items-center gap-4 pt-4">
-                    <p className="text-base leading-8 text-white">Get Started</p>
+                    <p className="text-base leading-8 text-white">
+                      Get Started
+                    </p>
                     <ArrowIcon
                       width={16}
                       height={16}

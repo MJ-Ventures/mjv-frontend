@@ -55,7 +55,7 @@ export default function Header() {
         >
           <PopoverPanel
             anchor="bottom"
-            className="flex bg-black h-screen mt-10 origin-top flex-col z-50 px-3 transition w-screen"
+            className="flex bg-black h-screen mt-8 origin-top flex-col z-50 px-3 transition w-screen"
           >
             <div className="flex flex-col gap-3 py-10">
               {navMenu.map((item, index) => {

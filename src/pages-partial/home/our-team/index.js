@@ -51,7 +51,9 @@ export default function OurTeam() {
                 <img src={imgSrc} />
               </div>
               <div className="text-center py-2">
-                <p className="text-2xl leading-10 font-semibold text-white">{fullName}</p>
+                <p className="text-2xl leading-10 font-semibold text-white">
+                  {fullName}
+                </p>
                 <p className="text-xl leading-7 text-[#838381]">
                   {designation}
                 </p>
