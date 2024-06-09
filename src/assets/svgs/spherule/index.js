@@ -1,8 +1,10 @@
-const SpheruleIcon = () => {
+const SpheruleIcon = ({ width = 167, height = 48, className, ...props }) => {
   return (
     <svg
-      width={167}
-      height={48}
+      width={width}
+      height={height}
+      className={className}
+      {...props}
       viewBox="0 0 167 48"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"

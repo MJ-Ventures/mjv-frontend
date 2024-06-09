@@ -171,8 +171,8 @@ export default function CaseStudies() {
           );
         })}
       </Swiper>
-      <div className="pt-16 text-center">
-        <button className="py-3 px-8 rounded-lg bg-[#151515] border border-[#292929]">
+      <div className="lg:pt-16 pt-8 text-center">
+        <button className="py-3 px-8 w-full lg:max-w-max rounded-lg bg-[#151515] border border-[#292929]">
           View all Case Studies
         </button>
       </div>

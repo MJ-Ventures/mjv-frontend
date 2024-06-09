@@ -8,19 +8,18 @@ const data = [
 export default function AboutUs() {
   return (
     <section className="relative border-b border-white/10" id="about-us">
-      <div className="relative z-0">
-        <img src="/images/about-us/1.png" />
-        <div className="h-14 w-full bg-black  backdrop-blur-lg absolute bottom-0"></div>
+      <div className="relative z-0 ">
+        <img src="/images/about-us/1.png" className="lg:h-full h-[412px]" />
       </div>
-      <div className="max-w-screen-lg mx-auto -mt-56 z-10 relative">
-        <div className="max-w-[906px] m-16 mx-auto w-full flex flex-col gap-3">
+      <div className="max-w-screen-lg mx-auto lg:-mt-56 -mt-24 z-10 relative">
+        <div className="max-w-[906px] m-16 mx-auto w-full flex flex-col gap-3 lg:px-0 px-3">
           <h5 className="text-center text-base text-white font-medium leading-[22px] tracking-[6px]">
             – ABOUT US –
           </h5>
-          <h1 className="text-center text-white text-[52px] font-semibold leading-relaxed">
+          <h1 className="text-center text-white lg:text-[52px] text-2xl font-semibold lg:leading-relaxed leading-0">
             THE MJV STORY{" "}
           </h1>
-          <p className="text-center text-base font-normal text-white leading-8">
+          <p className="text-center text-base font-normal text-white lg:leading-8 leading-5">
             Founded in 2023 by longtime friends and developers from Chicago, MJ
             Ventures brings over a decade of experience to our projects. Our
             passion for building impactful products has driven us to work on
@@ -30,7 +29,7 @@ export default function AboutUs() {
         <div>
           <div className="my-16 mx-0">
             <h5 className="text-xl text-center text-white">How We Collaborate with You</h5>
-            <div className="grid grid-cols-2 gap-8 pt-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 pt-8 lg:px-0 px-3">
               {data
                 .map((element,index) => {
                   const { title} = element
@@ -48,8 +47,8 @@ export default function AboutUs() {
                 })}
             </div>
           </div>
-          <div className="pb-10 text-center">
-            <button className="py-3 px-8 rounded-lg text-white bg-[#151515] border border-[#292929]">
+          <div className="pb-10 text-center px-3 lg:px-0">
+            <button className="py-3 px-8 lg:max-w-max w-full rounded-lg text-white bg-[#151515] border border-[#292929]">
               Let&apos;s Collaborate
             </button>
           </div>

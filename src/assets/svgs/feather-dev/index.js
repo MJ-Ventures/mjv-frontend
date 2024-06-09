@@ -1,8 +1,10 @@
-const FeatherDevIcon = () => {
+const FeatherDevIcon = ({ height = 48, width = 198, className, ...props }) => {
   return (
     <svg
-      width={198}
-      height={48}
+      width={width}
+      height={height}
+      className={className}
+      {...props}
       viewBox="0 0 198 48"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"

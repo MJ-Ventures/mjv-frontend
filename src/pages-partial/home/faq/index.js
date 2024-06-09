@@ -1,4 +1,4 @@
-import { ArrowIcon } from "@/assets/svgs";
+import { ArrowIcon, MinusIcon, PlusIcon } from "@/assets/svgs";
 import {
   Disclosure,
   DisclosureButton,
@@ -8,17 +8,18 @@ import {
 export default function FaqSection() {
   return (
     <section className="w-full border-y border-white/10">
-      <div className="py-[120px] px-[160px] w-full flex flex-col gap-6">
-        <div className="flex ">
-          <div className="w-3/4 space-y-4 flex-1">
-            <h1 className="text-[52px] uppercase text-white leading-[67px] font-bold">
+      <div className="lg:py-[120px] lg:px-[160px] py-10 px-3 w-full flex flex-col gap-6">
+        <div className="flex lg:flex-row flex-col gap-4 ">
+          <div className="lg:w-3/4 w-full space-y-4 flex-1">
+            <h1 className="lg:text-[52px] text-xl lg:text-start text-center uppercase text-white lg:leading-[67px] leading-8 font-bold">
               Frequently asked questions ?
             </h1>
-            <p className="uppercase text-lg text-white leading-7">
+            <p className="uppercase text-center lg:text-start text-lg text-white leading-7">
               You’ve got question? <br />
-              Here are some of the answers and answers from <br /> MJV TEAM
+              Here are some of the answers and answers from{" "}
+              <br className="lg:inline hidden" /> MJV TEAM
             </p>
-            <button className="py-4 my-6 px-14 text-white rounded-lg bg-[#151515] border border-[#292929]">
+            <button className="py-4 my-6 px-14 lg:block hidden text-white rounded-lg bg-[#151515] border border-[#292929]">
               Contact Us
             </button>
           </div>
@@ -31,7 +32,8 @@ export default function FaqSection() {
                 <span className="text-xl text-start w-4/5 uppercase font-medium text-white">
                   What industries do you specialize in for web development
                 </span>
-                <ArrowIcon className="size-5 fill-white/60 group-data-[hover]:fill-white/50 group-data-[open]:rotate-180" />
+                <MinusIcon className="group-data-[open]:inline hidden" />
+                <PlusIcon className="group-data-[open]:hidden inline" />
               </DisclosureButton>
               <DisclosurePanel className="mt-2 text-lg leading-7 text-white">
                 At MJ Ventures, we have extensive experience working with a wide
@@ -48,7 +50,8 @@ export default function FaqSection() {
                   How long does it typically take to develop a custom web
                   application?
                 </span>
-                <ArrowIcon className="size-5 fill-white/60 group-data-[hover]:fill-white/50 group-data-[open]:rotate-180" />
+                <MinusIcon className="group-data-[open]:inline hidden" />
+                <PlusIcon className="group-data-[open]:hidden inline" />
               </DisclosureButton>
               <DisclosurePanel className="mt-2 text-lg leading-7 text-white">
                 Some content here.
@@ -62,7 +65,8 @@ export default function FaqSection() {
                 <span className="text-xl text-start w-4/5 uppercase font-medium text-white">
                   DO YOU OFFER POST LAUNCH SUPPORT?
                 </span>
-                <ArrowIcon className="size-5 fill-white/60 group-data-[hover]:fill-white/50 group-data-[open]:rotate-180" />
+                <MinusIcon className="group-data-[open]:inline hidden" />
+                <PlusIcon className="group-data-[open]:hidden inline" />
               </DisclosureButton>
               <DisclosurePanel className="mt-2 text-lg leading-7 text-white">
                 At MJ Ventures, we have extensive experience working with a wide
@@ -78,12 +82,18 @@ export default function FaqSection() {
                 <span className="text-xl text-start w-4/5 uppercase font-medium text-white">
                   WILL YOU HELP WITH STRATEGY?
                 </span>
-                <ArrowIcon className="size-5 fill-white/60 group-data-[hover]:fill-white/50 group-data-[open]:rotate-180" />
+                <MinusIcon className="group-data-[open]:inline hidden" />
+                <PlusIcon className="group-data-[open]:hidden inline" />
               </DisclosureButton>
               <DisclosurePanel className="mt-2 text-lg leading-7 text-white">
                 Some content here.
               </DisclosurePanel>
             </Disclosure>
+          </div>
+          <div>
+            <button className="py-4 my-6 px-14 lg:hidden block w-full text-white rounded-lg bg-[#151515] border border-[#292929]">
+              Contact Us
+            </button>
           </div>
         </div>
       </div>
