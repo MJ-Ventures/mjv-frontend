@@ -1,26 +1,26 @@
 export default function Contact() {
   return (
-    <div className="relative py-40 px-[120px] space-y-10">
-      <div className="relative flex">
-        <div className="relative w-3/5">
+    <div className="relative py-16 lg:py-36 lg:px-[120px] px-4 sm:px-9 space-y-10">
+      <div className="relative flex flex-col-reverse lg:flex-row">
+        <div className="relative lg:w-3/5 w-full">
           <div>
             <div className="flex items-center gap-2 pb-5">
-              <h5 className="text-center  text-white uppercase text-base font-medium leading-[22px] tracking-[6px]">
+              <h5 className="text-center text-white uppercase text-base font-medium leading-[22px] tracking-[6px]">
                 – Contact us –
               </h5>
             </div>
             <div className="w-full">
-              <h2 className="text-[52px] leading-8 lg:leading-[52px] uppercase font-semibold -tracking-[0.02rem] text-white pb-5">
+              <h2 className="text-[32px] sm:text-[42px] md:text-[52px] md:leading-10 leading-8 lg:leading-[52px] uppercase font-semibold -tracking-[0.02rem] text-white pb-5">
                 Get in touch with us Today
               </h2>
-              <p className="text-xl text-white w-[80%]">
+              <p className="text-base sm:text-lg md:text-xl text-white w-full lg:w-[80%]">
                 Lorem ipsum dolor sit amet consectetur. Nulla netus porta montes
                 eget laoreet sit vitae.
               </p>
             </div>
-            <form className="w-[80%]">
-              <div className="mt-12">
-                <div className="flex xl:items-center flex-col xl:flex-row gap-4 pb-6">
+            <form className="w-full lg:w-[80%]">
+              <div className="mt-8 lg:mt-12">
+                <div className="flex flex-col xl:flex-row gap-4 pb-6">
                   <div className="w-full">
                     <div className="flex flex-col gap-1.5 w-full">
                       <label
@@ -33,7 +33,7 @@ export default function Contact() {
                         id="firstName"
                         name="firstName"
                         placeholder="First Name"
-                        className="px-3.5 py-2.5 bg-transparent border border-white/10 rounded-sm ouline-none focus:outline-blue-500 placeholder:text-gray-400 placeholder:text-base "
+                        className="px-3.5 py-2.5 bg-transparent border border-white/10 rounded-sm outline-none focus:outline-blue-500 placeholder:text-gray-400 placeholder:text-base"
                         defaultValue=""
                       />
                     </div>
@@ -51,7 +51,7 @@ export default function Contact() {
                       id="email"
                       name="email"
                       placeholder="you@example.com"
-                      className="px-3.5 py-2.5 bg-transparent border border-white/10 rounded-sm ouline-none focus:outline-blue-500 placeholder:text-gray-400 placeholder:text-base "
+                      className="px-3.5 py-2.5 bg-transparent border border-white/10 rounded-sm outline-none focus:outline-blue-500 placeholder:text-gray-400 placeholder:text-base"
                       defaultValue=""
                     />
                   </div>
@@ -68,8 +68,8 @@ export default function Contact() {
                     id="Message"
                     rows={4}
                     placeholder="Leave us a message ..."
-                    className="px-3.5 py-3 resize-none border bg-transparent border-white/10 rounded-sm ouline-none focus:outline-none placeholder:text-gray-400 placeholder:text-base"
-                    defaultValue={""}
+                    className="px-3.5 py-3 resize-none bg-transparent border border-white/10 rounded-sm outline-none focus:outline-blue-500 placeholder:text-gray-400 placeholder:text-base"
+                    defaultValue=""
                   />
                 </div>
               </div>
@@ -79,32 +79,29 @@ export default function Contact() {
             </form>
           </div>
         </div>
-        <div
-          className="relative flex flex-col w-2/5 justify-center col-span-1"
-          aria-hidden="true"
-        >
+        <div className="relative flex flex-col w-full lg:w-2/5 justify-center col-span-1 mb-10 lg:mb-0">
           <img
-            className="relative h-[80%] bg-contain"
+            className="relative h-auto lg:h-[80%] bg-contain"
             src="/images/contact/main.jpg"
-            alt=""
+            alt="Contact Image"
           />
         </div>
       </div>
-      <div className="bg-[#151515] py-12 px-8 relative">
-        <h2 className="text-3xl pb-4 text-white">Subscribe to our Newsletter</h2>
-        <div className="grid grid-cols-5 gap-20">
-          <p className="col-span-3 text-white">
+      <div className="bg-[#151515] py-12 px-4 sm:px-8 relative">
+        <h2 className="text-2xl sm:text-3xl pb-4 text-white">Subscribe to our Newsletter</h2>
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-10 lg:gap-20">
+          <p className="lg:col-span-3 col-span-5 text-white">
             Lorem ipsum dolor sit amet consectetur. Nulla netus porta montes
             eget laoreet sit vitae. Lorem ipsum dolor sit amet consectetur.
             Nulla netus porta
           </p>
-          <div className="col-span-1 flex items-center gap-4">
+          <div className="lg:col-span-2 col-span-5 flex flex-col sm:flex-row items-center gap-4">
             <input
               type="text"
-              className="bg-transparent border border-white/10 px-4 outline-none py-3.5 rounded-md"
+              className="bg-transparent border border-white/10 px-4 py-3.5 rounded-md outline-none w-full md:w-full sm:w-auto"
               placeholder="Email address"
             />
-            <button className="text-black bg-white text-sm py-4 px-8 rounded-md">
+            <button className="text-black bg-white text-sm py-4 px-8 rounded-md w-full sm:w-auto">
               Subscribe
             </button>
           </div>

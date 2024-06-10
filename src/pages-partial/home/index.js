@@ -24,7 +24,7 @@ export default function Home() {
       <OurTeam />
       <Testimonials />
       <BlogSection count={3} />
-      <Contact />
+      <Contact /> 
       <Footer />
     </main>
   );

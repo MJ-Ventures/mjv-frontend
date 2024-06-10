@@ -57,6 +57,7 @@ export default function CaseStudies() {
   ];
   const swiperRef = useRef(null);
   const [activeIndex, setactiveIndex] = useState(0);
+  const [isEnd, setIsEnd] = useState(false);
   const slidesPerView = 3;
 
   return (
@@ -64,7 +65,8 @@ export default function CaseStudies() {
       <div className="relative">
         <div>
           <h5 className="text-base md:text-start text-center font-medium leading-[22px] tracking-[6px]">
-            – OUR CASE STUDIES <span className="md:hidden inline text-base">–</span>
+            – OUR CASE STUDIES{" "}
+            <span className="md:hidden inline text-base">–</span>
           </h5>
           <h5 className="font-semibold  md:text-start text-center text-xl md:text-4xl nd:leading-[52px] leading-[30px] text-white mt-3">
             GET INSIGHT INTO THE MANY POSSIBILITIES!
@@ -72,11 +74,11 @@ export default function CaseStudies() {
           <div className="flex md:flex-row flex-col justify-between items-center mt-4">
             <p className="text-base font-normal md:text-start text-center md:leading-8 leading-6">
               Our team has spent years building software products for political
-              campaigns and non-profits. <br className="md:inline hidden" /> We’ve learned, sometimes the
-              hard way, that small orgs need to build smarter tech to stay
-              competitive.{" "}
+              campaigns and non-profits. <br className="md:inline hidden" />{" "}
+              We’ve learned, sometimes the hard way, that small orgs need to
+              build smarter tech to stay competitive.{" "}
             </p>
-            <div className="flex items-center md:pt-0 pt-3 gap-x-8">
+            <div className="flex items-center md:pt-0 pt-6 gap-x-8">
               <div
                 onClick={() => {
                   if (activeIndex !== 0) {
@@ -96,11 +98,7 @@ export default function CaseStudies() {
                   }
                 }}
                 className={`
-            ${
-              activeIndex === data?.length - slidesPerView
-                ? "opacity-20"
-                : "opacity-100"
-            }
+            ${isEnd ? "opacity-20" : "opacity-100"}
             cursor-pointer flex justify-center items-center`}
               >
                 <ArrowIcon width="24" height="24" className="rotate-[45deg]" />
@@ -114,13 +112,10 @@ export default function CaseStudies() {
         spaceBetween={20}
         onSlideChange={(e) => {
           setactiveIndex(e.activeIndex);
+          setIsEnd(e.isEnd);
         }}
         className="md:mt-16 mt-6"
         breakpoints={{
-          640: {
-            slidesPerView: 1,
-            spaceBetween: 10,
-          },
           768: {
             slidesPerView: 2,
             spaceBetween: 10,
@@ -130,26 +125,26 @@ export default function CaseStudies() {
             spaceBetween: 20,
           },
         }}
-        slidesPerView={slidesPerView}
+        slidesPerView={1}
       >
         {data.map((ele, index) => {
           const { title, description, imgSrc, tags } = ele;
           return (
             <SwiperSlide key={index}>
               <div className="border border-[#292929] bg-[#151515] rounded-sm ">
-                <div className="flex flex-col p-8 gap-4">
+                <div className="flex flex-col md:p-8 p-4 nd:gap-4 gap-5">
                   <img src={imgSrc} />
                   <div className="flex flex-col gap-2">
                     <h4 className="text-3xl font-medium leading-8">{title}</h4>
-                    <p className="text-sm leading-7 text-[#EAEAEB]">
+                    <p className="md:text-sm text-xs md:leading-7 leading-5 text-[rgb(234,234,235)]">
                       {description}
                     </p>
-                    <div className="flex flex-wrap gap-2">
+                    <div className="flex flex-wrap gap-2 lg:pt-0 pt-3">
                       {tags.map((item, index) => {
                         return (
                           <p
                             key={index}
-                            className="py-2.5 px-4 border rounded-md hover:bg-white hover:text-[#292929] cursor-pointer border-white"
+                            className="md:py-2.5 md:px-4 p-1 md:text-base text-sm border rounded-md hover:bg-white hover:text-[#292929] cursor-pointer border-white"
                           >
                             {item}
                           </p>

@@ -49,12 +49,12 @@ const data = [
 
 export default function OurServices() {
   return (
-    <section className="py-12" id="services">
+    <section className="py-12 lg:px-2 px-0" id="services">
       <div>
         <h5 className="text-base text-white lg:text-start text-center font-medium lg:leading-[22px] leading-4 tracking-[6px]">
           – OUR SERVICES <span className="lg:hidden inline">–</span>
         </h5>
-        <h5 className="font-semibold lg:text-3xl text-xl  lg:text-start text-center md:text-4xl lg:leading-[52px] leading-8 text-white mt-3">
+        <h5 className="font-semibold lg:text-3xl text-xl lg:text-start text-center md:text-4xl lg:leading-[52px] leading-8 text-white mt-3">
           HOW WE CAN <br className="lg:inline hidden" /> HELP YOU
         </h5>
         <div className="flex justify-between items-center mt-4 lg:px-0 px-3">
