@@ -9,14 +9,14 @@ export default function AboutUs() {
   return (
     <section className="relative border-b border-white/10" id="about-us">
       <div className="relative z-0 ">
-        <img src="/images/about-us/1.png" className="lg:h-full h-[412px]" />
+        <img src="/images/about-us/1.png" className="lg:h-full h-[412px] bg-cover w-full" />
       </div>
-      <div className="max-w-screen-lg mx-auto lg:-mt-56 -mt-24 z-10 relative">
+      <div className="max-w-screen-lg mx-auto lg:-mt-56 -mt-40 z-10 relative">
         <div className="max-w-[906px] m-16 mx-auto w-full flex flex-col gap-3 lg:px-0 px-3">
           <h5 className="text-center text-base text-white font-medium leading-[22px] tracking-[6px]">
             – ABOUT US –
           </h5>
-          <h1 className="text-center text-white lg:text-[52px] text-2xl font-semibold lg:leading-relaxed leading-0">
+          <h1 className="text-center text-white md:text-[52px] text-2xl font-semibold md:leading-relaxed leading-0">
             THE MJV STORY{" "}
           </h1>
           <p className="text-center text-base font-normal text-white lg:leading-8 leading-5">

@@ -14,7 +14,7 @@ const navMenu = [
   { text: "services", link: "/#services" },
   { text: "our team", link: "/#our-team" },
   { text: "projects", link: "/#projects" },
-  { text: "blog", link: "/blogs" },
+  { text: "blog", link: "/blog" },
 ];
 
 export default function Header() {

@@ -11,7 +11,7 @@ export default function FaqSection() {
       <div className="lg:py-[120px] lg:px-[160px] py-10 px-3 w-full flex flex-col gap-6">
         <div className="flex lg:flex-row flex-col gap-4 ">
           <div className="lg:w-3/4 w-full space-y-4 flex-1">
-            <h1 className="lg:text-[52px] text-xl lg:text-start text-center uppercase text-white lg:leading-[67px] leading-8 font-bold">
+            <h1 className="md:text-[52px] text-xl lg:text-start text-center uppercase text-white md:leading-[67px] leading-8 font-bold">
               Frequently asked questions ?
             </h1>
             <p className="uppercase text-center lg:text-start text-lg text-white leading-7">

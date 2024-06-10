@@ -2,12 +2,12 @@ import { CommasIcon } from "@/assets/svgs";
 
 export default function Testimonials() {
   return (
-    <section className="py-12 border-b border-white/10">
-      <div className="max-w-[906px] m-16 mx-auto w-full flex flex-col gap-3">
+    <section className="md:py-12 py-4 border-b border-white/10">
+      <div className="max-w-[906px] md:px-0 px-3 py-10 pb-24 mx-auto w-full flex flex-col gap-3">
         <h5 className="text-center  text-white text-base font-medium leading-[22px] tracking-[6px]">
           – Testimonials –
         </h5>
-        <h1 className="text-center text-white text-[52px] font-semibold leading-relaxed">
+        <h1 className="text-center text-white md:text-[52px] text-xl font-semibold leading-relaxed">
           WHAT OUR CLIENTS SAY
         </h1>
         <p className="text-center text-white text-base font-normal leading-8">
@@ -22,7 +22,7 @@ export default function Testimonials() {
               return (
                 <div
                   key={index}
-                  className="h-full w-[30vw] flex-shrink-0 p-6 rounded-lg shadow-sm duration-300 outline outline-transparent bg-[#151515]"
+                  className="h-full w-[494px] flex-shrink-0 p-6 rounded-lg shadow-sm duration-300 outline outline-transparent bg-[#151515]"
                 >
                   <div className="flex flex-col gap-5">
                     <CommasIcon />

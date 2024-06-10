@@ -18,7 +18,7 @@ const TextCounter = () => {
   const getStyle = (idx) => {
     const distance = Math.abs((idx % items.length) - (index % items.length));
     if (distance === 0) {
-      return "lg:text-6xl text-3xl opacity-100 leading-tight font-semibold";
+      return "lg:text-6xl md:text-4xl text-3xl opacity-100 leading-tight font-semibold";
     } else if (distance === 1) {
       return "text-4xl text-3xl opacity-50 leading-tight font-semibold";
     } else {
@@ -34,7 +34,7 @@ const TextCounter = () => {
         return (
           <div
             key={idx}
-            className={`absolute flex md:h-[13%] h-10 items-center text-white justify-center text-start transition-transform duration-700 ${
+            className={`absolute flex md:h-[78%] lg:h-[13%] h-10 items-center text-white justify-center text-start transition-transform duration-700 ${
               isTransitioning ? "transition-transform" : ""
             } ${getStyle(idx)}`}
             style={{
