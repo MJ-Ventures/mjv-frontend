@@ -9,6 +9,7 @@ import LightBoxIcon from "./light-box";
 import Logo from "./logo";
 import MinusIcon from "./minus-icon";
 import MobileIcon from "./mobile-icon";
+import NewsIcon from "./news-icon";
 import PenToolIcon from "./pen-tool-icon";
 import PlusIcon from "./plus-icon";
 import PuzzleIcon from "./puzzle-icon";
@@ -30,5 +31,6 @@ export {
   SearchIcon,
   MobileIcon,
   MinusIcon,
-  PlusIcon
+  PlusIcon,
+  NewsIcon,
 };

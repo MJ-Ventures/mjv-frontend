@@ -1,34 +1,11 @@
-const team = [
-  {
-    fullName: "Marley Rosario",
-    designation: "Chief Executive Officer",
-    imgSrc: "/images/team/marley-rosario.png",
-  },
-  {
-    fullName: "Martyna Paruch",
-    designation: "Chief Technology Officer",
-    imgSrc: "/images/team/martyna-paruch.png",
-  },
-  {
-    fullName: "Forrest Haydon",
-    designation: "Chief Product Officer",
-    imgSrc: "/images/team/forrest-haydon.png",
-  },
-  {
-    fullName: "Jacob Salazar",
-    designation: "Chief Operating Officer",
-    imgSrc: "/images/team/jacob-salazar.png",
-  },
-  {
-    fullName: "Sam Aguilar",
-    designation: "Chief Design Officer",
-    imgSrc: "/images/team/sam-aguilar.png",
-  },
-];
+import { team } from "@/components/consts/team";
 
 export default function OurTeam() {
   return (
-    <section className="w-full lg:py-12 py-6 lg:px-0 px-3 border-b border-white/10" id="our-team">
+    <section
+      className="w-full lg:py-12 py-6 lg:px-0 px-3 border-b border-white/10"
+      id="our-team"
+    >
       <div className="lg:py-[100px] py-10 lg:px-[120px] w-full flex flex-col lg:gap-6 gap-3">
         <h5 className="text-center text-base font-medium text-white leading-[22px] tracking-[6px]">
           – OUR TEAM –
@@ -38,8 +15,9 @@ export default function OurTeam() {
         </h1>
         <p className="text-center text-base font-normal text-white lg:leading-8 leading-6">
           Our team has spent years building software products for political
-          campaigns and non-profits. <br className="hidden lg:inline" /> We’ve learned, sometimes the hard
-          way, that small orgs need to build smarter tech to stay competitive.{" "}
+          campaigns and non-profits. <br className="hidden lg:inline" /> We’ve
+          learned, sometimes the hard way, that small orgs need to build smarter
+          tech to stay competitive.{" "}
         </p>
       </div>
       <div className="grid lg:grid-cols-5 md:grid-cols-3 grid-cols-2 justify-between md:gap-4 gap-4">
