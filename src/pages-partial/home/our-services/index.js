@@ -1,51 +1,8 @@
 import {
   ArrowIcon,
-  BulbIcon,
-  LayerGroupIcon,
-  PenToolIcon,
-  PuzzleIcon,
-  SearchIcon,
-  MobileIcon,
 } from "@/assets/svgs";
+import { services } from "@/components/consts/services";
 
-const data = [
-  {
-    title: "Generative AI Solutions",
-    description:
-      "Lorem ipsum dolor sit amet consectetur. Cras leo ornare eget augue. Lacus eget enim cras",
-    icon: <BulbIcon />,
-  },
-  {
-    title: "Software Development",
-    description:
-      "Lorem ipsum dolor sit amet consectetur. Cras leo ornare eget augue. Lacus eget enim cras",
-    icon: <PuzzleIcon />,
-  },
-  {
-    title: "UX/UI Design",
-    description:
-      "Lorem ipsum dolor sit amet consectetur. Cras leo ornare eget augue. Lacus eget enim cras",
-    icon: <PenToolIcon />,
-  },
-  {
-    title: "Product Strategy",
-    description:
-      "Lorem ipsum dolor sit amet consectetur. Cras leo ornare eget augue. Lacus eget enim cras",
-    icon: <LayerGroupIcon />,
-  },
-  {
-    title: "SEO",
-    description:
-      "Lorem ipsum dolor sit amet consectetur. Cras leo ornare eget augue. Lacus eget enim cras",
-    icon: <SearchIcon />,
-  },
-  {
-    title: "Mobile App Development",
-    description:
-      "Lorem ipsum dolor sit amet consectetur. Cras leo ornare eget augue. Lacus eget enim cras",
-    icon: <MobileIcon />,
-  },
-];
 
 export default function OurServices() {
   return (
@@ -72,7 +29,7 @@ export default function OurServices() {
       </div>
       <div>
         <div className="grid grid-cols-1 gap-4 mt-8 lg:px-0 px-3 sm:grid-cols-2 lg:grid-cols-3">
-          {data.map((element, index) => {
+          {services.map((element, index) => {
             const { description, icon, title } = element;
             return (
               <div

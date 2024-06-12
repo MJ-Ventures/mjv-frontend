@@ -1,6 +1,6 @@
 "use client";
+import { data } from "@/components/consts/hero";
 import { useEffect, useState } from "react";
-import { data } from "./data";
 
 const TextCounter = () => {
   const [items, setItems] = useState(data);

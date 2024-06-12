@@ -43,7 +43,7 @@ export default function Testimonials() {
                           />
                         </span>
                         <div className="flex flex-col gap-1 items-start justify-center">
-                          <h4 className="text-lg font-semibold text-white leading-none text-default-600">
+                          <h4 className="text-lg font-semibold text-white leading-none">
                             Zoey Lang
                           </h4>
                           <h5 className="text-sm tracking-tight text-[#A5A5A1]">

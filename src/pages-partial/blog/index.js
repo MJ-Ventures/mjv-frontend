@@ -2,7 +2,7 @@ import BlogSection from "../home/blog";
 import Contact from "../home/contact";
 import Footer from "../home/footer";
 import Header from "../home/header";
-import AllBlogSection from "./blogs";
+import AllBlogSection from "./all-blogs";
 import BlogHeroSection from "./hero";
 
 export default function Blog() {
