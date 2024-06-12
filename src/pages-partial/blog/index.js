@@ -12,7 +12,9 @@ export default function Blog() {
 
   const getBlogs = async () => {
     try {
-      const response = await fetch("http://localhost:3000/api/get-blogs");
+      const response = await fetch(
+        `${process.env.NEXT_PUBLIC_BASE_URL}/get-blogs`
+      );
       const { blogs } = await response.json();
       setBlogs(blogs);
     } catch (err) {
