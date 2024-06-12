@@ -1,4 +1,4 @@
-import { navigation } from "./data";
+import { navigation } from "@/components/consts/footer";
 
 export default function Footer() {
   return (

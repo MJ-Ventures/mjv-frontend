@@ -4,6 +4,7 @@ import BulbIcon from "./bulb-icon";
 import CommasIcon from "./commas-icon";
 import FeatherDevIcon from "./feather-dev";
 import GlobalBankIcon from "./global-bank";
+import ImagePolityIcon from "./image-polity";
 import LayerGroupIcon from "./layer-group-icon";
 import LightBoxIcon from "./light-box";
 import Logo from "./logo";
@@ -33,4 +34,5 @@ export {
   MinusIcon,
   PlusIcon,
   NewsIcon,
+  ImagePolityIcon,
 };

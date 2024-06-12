@@ -1,9 +1,4 @@
-const data = [
-  {title: 'Visionary Planning'},
-  {title: 'INITIAL IMPACT'},
-  {title: 'RAPID VALUE CREATION'},
-  {title: 'SCALING INNOVATION'},
-]
+import { aboutus } from "@/components/consts/about-us";
 
 export default function AboutUs() {
   return (
@@ -30,7 +25,7 @@ export default function AboutUs() {
           <div className="my-16 mx-0">
             <h5 className="text-xl text-center text-white">How We Collaborate with You</h5>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 pt-8 lg:px-0 px-3">
-              {data
+              {aboutus
                 .map((element,index) => {
                   const { title} = element
                   return (

@@ -1,5 +1,6 @@
 import { ArrowIcon, Logo } from "@/assets/svgs";
 import MenuIcon from "@/assets/svgs/menu-icon";
+import { navMenu } from "@/components/consts/header";
 import {
   Popover,
   PopoverButton,
@@ -9,13 +10,6 @@ import {
 import Link from "next/link";
 import { Fragment } from "react";
 
-const navMenu = [
-  { text: "about us", link: "/#about-us" },
-  { text: "services", link: "/#services" },
-  { text: "our team", link: "/#our-team" },
-  { text: "projects", link: "/#projects" },
-  { text: "blog", link: "/blog" },
-];
 
 export default function Header() {
   return (
