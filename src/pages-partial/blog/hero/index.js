@@ -8,21 +8,21 @@ export default function BlogHeroSection() {
       <div className="border-b border-white/10 px-4 sm:px-10 py-10 lg:py-14">
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-8">
           <div className="lg:col-span-3 space-y-3 py-5 lg:py-10">
-            <p className="text-xl text-white/50">
+            <p className="md:text-xl text-lg text-white/50">
               Your Journey to Tomorrow Begins Here
             </p>
-            <h1 className="text-[32px] sm:text-[45px] lg:text-[55px] text-white">
+            <h1 className="text-3xl leading-9 md:leading-[53px] md:text-[55px] text-white">
               Explore the Frontiers of Artificial Intelligence
             </h1>
-            <p className="text-[#EAEAEB] w-full lg:w-[85%]">
+            <p className="text-[#EAEAEB] w-full md:text-base text-sm md:leading-6 leading-[21px] lg:w-[85%]">
               Welcome to the epicenter of AI innovation. MJ Ventures is your
               passport to a world where machines think, learn, and reshape the
               future.
             </p>
           </div>
           <div className="lg:col-span-2">
-            <div className="mt-10 lg:pt-28">
-              <div className="bg-[#151515] p-1 max-w-max rounded-full mx-auto lg:mx-0">
+            <div className="mt-5 lg:pt-28">
+              <div className="bg-[#151515] p-1 max-w-max rounded-full md:mx-auto mx-0 lg:mx-0">
                 <AvatarGroup>
                   {team.map((item, index) => {
                     const { imgSrc } = item;
@@ -36,7 +36,7 @@ export default function BlogHeroSection() {
                   })}
                 </AvatarGroup>
               </div>
-              <div className="py-3 text-center lg:text-left">
+              <div className="py-3 lg:text-left">
                 <p className="text-xl text-white flex items-center gap-2 ">
                   The Digital Polity Newsletter. <ImagePolityIcon />
                 </p>

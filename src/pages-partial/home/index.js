@@ -13,19 +13,21 @@ import Testimonials from "./testimonials";
 
 export default function Home() {
   return (
-    <main className="max-w-[1440px] mx-auto bg-black">
-      <Header />
-      <Hero />
-      <CaseStudies />
-      <PartnerSection />
-      <AboutUs />
-      <OurServices />
-      <FaqSection />
-      <OurTeam />
-      <Testimonials />
-      <BlogSection count={3} />
-      <Contact /> 
+    <>
+      <div className="max-w-[1440px] mx-auto">
+        <Header />
+        <Hero />
+        <CaseStudies />
+        <PartnerSection />
+        <AboutUs />
+        <OurServices />
+        <FaqSection />
+        <OurTeam />
+        <Testimonials />
+        <BlogSection count={3} />
+        <Contact />
+      </div>
       <Footer />
-    </main>
+    </>
   );
 }

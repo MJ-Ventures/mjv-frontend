@@ -1,8 +1,10 @@
 "use client";
 import { ArrowIcon } from "@/assets/svgs";
-import { tabsData } from "@/components/consts/blog";
-import { Pagination, Tab, Tabs } from "@nextui-org/react";
+import PaginationWrapper from "@/components/pagination-wrapper";
+import { transformData } from "@/components/utils";
+import {  Tab, Tabs } from "@nextui-org/react";
 import moment from "moment";
+import { usePathname, useRouter } from "next/navigation";
 
 function BlogsHeader() {
   return (
@@ -29,10 +31,12 @@ function BlogsHeader() {
 }
 
 function BlogsList({ data }) {
+  const { push } = useRouter();
+  const pathName = usePathname();
   return (
     data &&
     data?.map((blog, index) => {
-      const { date, title, description } = blog;
+      const { date, title, description, slug } = blog;
       return (
         <article key={index} className="py-10 border-t border-white/10">
           <div className="max-w-7xl mx-auto grid grid-cols-12">
@@ -44,7 +48,10 @@ function BlogsList({ data }) {
               <p className="text-base text-[#838381]">{description}</p>
             </div>
             <div className="col-span-3 flex flex-col justify-center items-end">
-              <button className="py-3 px-8 w-full lg:w-auto flex lg:max-w-max items-center justify-center lg:justify-start gap-3 rounded-lg text-white bg-[#151515] border border-[#292929]">
+              <button
+                className="py-3 px-8 w-full lg:w-auto flex cursor-pointer lg:max-w-max items-center justify-center lg:justify-start gap-3 rounded-lg text-white bg-[#151515] border border-[#292929]"
+                onClick={() => push(`${pathName}/${slug}`)}
+              >
                 View Blog
                 <ArrowIcon height={10} width={10} className="" />
               </button>
@@ -56,7 +63,7 @@ function BlogsList({ data }) {
   );
 }
 
-function BlogsTabs() {
+function BlogsTabs({ data }) {
   return (
     <div className="flex w-full flex-col pt-10 space-y-10 ">
       <Tabs
@@ -69,27 +76,11 @@ function BlogsTabs() {
           tabContent: "group-data-[selected=true]:text-white",
         }}
       >
-        {tabsData.map((tab) => (
+        {data?.map((tab) => (
           <Tab key={tab.title} title={tab.category}>
-            <BlogsList data={tab.data} />
-            {tab?.data?.length ? (
-              <div className="border-t border-[#292929]">
-                <div className="max-w-7xl mx-auto flex justify-between items-center py-4">
-                  <p>Showing 1 to 3 of 120</p>
-                  <Pagination
-                    classNames={{
-                      item: "rounded-none bg-transparent text-white rounded-md border border-[#292929] [&[data-hover=true]:not([data-active=true])]:bg-transparent data-[active=true]:bg-[#292929] data-[active=true]:border-none",
-                      cursor: "rounded-none",
-                    }}
-                    disableCursorAnimation
-                    total={24}
-                    initialPage={1}
-                  />
-                </div>
-              </div>
-            ) : (
-              ""
-            )}
+            <PaginationWrapper data={tab.data} itemsPerPage={5}>
+              {(currentItems) => <BlogsList data={currentItems} />}
+            </PaginationWrapper>
           </Tab>
         ))}
       </Tabs>
@@ -97,11 +88,11 @@ function BlogsTabs() {
   );
 }
 
-export default function AllBlogSection() {
+export default function AllBlogSection({ data }) {
   return (
     <>
       <BlogsHeader />
-      <BlogsTabs />
+      <BlogsTabs data={transformData(data)} />
     </>
   );
 }
