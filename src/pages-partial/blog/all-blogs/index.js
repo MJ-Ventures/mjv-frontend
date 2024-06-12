@@ -70,7 +70,7 @@ function BlogsTabs() {
         }}
       >
         {tabsData.map((tab) => (
-          <Tab key={tab.key} title={tab.title}>
+          <Tab key={tab.title} title={tab.category}>
             <BlogsList data={tab.data} />
             {tab?.data?.length ? (
               <div className="border-t border-[#292929]">

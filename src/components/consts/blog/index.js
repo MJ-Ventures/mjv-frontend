@@ -1,7 +1,6 @@
 export const tabsData = [
   {
-    key: "all",
-    title: "All",
+    category: "All",
     data: [
       {
         date: Date.now(),
@@ -27,8 +26,7 @@ export const tabsData = [
     ],
   },
   {
-    key: "quantum computing",
-    title: "Quantum Computing",
+    category: "Quantum Computing",
     data: [
       {
         date: Date.now(),
@@ -47,8 +45,7 @@ export const tabsData = [
     ],
   },
   {
-    key: "ai ethics",
-    title: "AI Ethics",
+    category: "AI Ethics",
     data: [
       {
         date: Date.now(),
@@ -60,8 +57,7 @@ export const tabsData = [
     ],
   },
   {
-    key: "space exploration",
-    title: "Space Exploration",
+    category: "Space Exploration",
     data: [
       {
         date: Date.now(),
@@ -73,8 +69,7 @@ export const tabsData = [
     ],
   },
   {
-    key: "biotechnology",
-    title: "Biotechnology",
+    category: "Bio Technology",
     data: [
       {
         date: Date.now(),
@@ -86,8 +81,7 @@ export const tabsData = [
     ],
   },
   {
-    key: "renewable energy",
-    title: "Renewable Energy",
+    category: "Renewable Energy",
     data: [
       {
         date: Date.now(),
