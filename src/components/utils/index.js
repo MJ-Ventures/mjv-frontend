@@ -1,4 +1,5 @@
 export const transformData = (data) => {
+  if (!data?.length) return;
   const transformedData = {};
 
   data.forEach((item) => {

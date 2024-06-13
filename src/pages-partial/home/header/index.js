@@ -10,11 +10,12 @@ import {
 import Link from "next/link";
 import { Fragment } from "react";
 
-
 export default function Header() {
   return (
     <header className="flex lg:px-2 px-3 sticky top-0 md:bg-transparent bg-[#151515] md:border-0 border border-white/10  items-center backdrop-blur-md z-50 justify-between">
-      <Logo />
+      <Link href='/'>
+        <Logo />
+      </Link>
       <div className="gap-6 md:flex hidden">
         {navMenu.map((item, index) => {
           const { text, link } = item;

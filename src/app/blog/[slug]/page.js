@@ -1,3 +1,6 @@
-export default function Blog() {
-  return <div> Single Blog Page</div>;
+import SingleBlogPartial from "@/pages-partial/single-blog";
+
+export default function SingleBlog({ params }) {
+  const { slug } = params;
+  return <SingleBlogPartial slug={slug} />;
 }
