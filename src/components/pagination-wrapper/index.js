@@ -33,7 +33,7 @@ const PaginationWrapper = ({ data, itemsPerPage, children }) => {
               disableCursorAnimation
               total={totalPages}
               initialPage={1}
-              onPageChange={handlePageChange}
+              onChange={handlePageChange}
             />
           </div>
         </div>

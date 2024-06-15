@@ -71,3 +71,11 @@ body {
   white-space: normal; /* Ensure text wraps inside each card */
   box-sizing: border-box; /* Include padding and border in element's total width and height */
 }
+
+.blog-gradient{
+  background: linear-gradient(180deg, rgba(20, 20, 20, 0) 0%, rgba(20, 20, 20, 0.880208) 75.52%, #141414 100%);
+}
+
+.read-more-gradient{
+  background: linear-gradient(180deg, rgba(21, 21, 21, 0.15) -19.6%, #151515 62.86%);
+}
