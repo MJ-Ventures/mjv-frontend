@@ -1,5 +1,4 @@
 'use client'
-import useFetchBlog from "@/hooks/blog";
 import Contact from "../home/contact";
 import Footer from "../home/footer";
 import Header from "../home/header";
