@@ -108,7 +108,7 @@ export default function BlogMainSection({ blog }) {
             <ul className="list-disc list-inside p-4 space-y-4">
               {tableOfContent.map((content, index) => {
                 return (
-                  <li className="text-base">
+                  <li key={index} className="text-base">
                     <a href={`#${content}`} key={index}>
                       {content}
                     </a>
