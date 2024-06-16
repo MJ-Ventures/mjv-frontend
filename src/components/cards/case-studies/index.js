@@ -1,11 +1,17 @@
 import { ArrowIcon } from "@/assets/svgs";
 import clsx from "clsx";
+import Link from "next/link";
 
-export default function CaseStudiesCard({ content , className, imgClasses }) {
+export default function CaseStudiesCard({ content, className, imgClasses }) {
   const { title, description, imgSrc, tags } = content;
 
   return (
-    <article className={clsx("border border-[#292929] bg-[#151515] rounded-sm" , className)}>
+    <article
+      className={clsx(
+        "border border-[#292929] bg-[#151515] rounded-sm",
+        className
+      )}
+    >
       <div className="flex flex-col md:p-8 p-4 nd:gap-4 gap-5">
         <img src={imgSrc} className={imgClasses} />
         <div className="flex flex-col gap-2">
@@ -26,14 +32,17 @@ export default function CaseStudiesCard({ content , className, imgClasses }) {
             })}
           </div>
         </div>
-        <div className="flex items-center gap-4 pt-4">
+        <Link
+          className="flex items-center gap-4 pt-4"
+          href={"/case-studies/smart-money-ai"}
+        >
           <p className="text-base leading-8">See Case Study</p>
           <ArrowIcon
             width={16}
             height={16}
             className="cursor-pointer hover:translate-x-2 transition-all rotate-[45deg]"
           />
-        </div>
+        </Link>
       </div>
     </article>
   );
