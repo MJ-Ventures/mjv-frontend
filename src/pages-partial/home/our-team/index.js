@@ -3,7 +3,7 @@ import { team } from "@/components/consts/team";
 export default function OurTeam() {
   return (
     <section
-      className="w-full lg:py-12 py-6 lg:px-0 px-3 border-b border-white/10"
+      className="w-full lg:py-12 py-6 max-w-[1440px] mx-auto lg:px-0 px-3 border-b border-white/10"
       id="our-team"
     >
       <div className="lg:py-[100px] py-10 lg:px-[120px] w-full flex flex-col lg:gap-6 gap-3">

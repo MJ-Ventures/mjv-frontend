@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function BlogSection({ count }) {
   return (
-    <section className="lg:py-12 py-4 px-3 relative border-b border-white/10">
+    <section className="lg:py-12 py-4 px-3 max-w-[1440px] mx-auto relative border-b border-white/10">
       <div className="max-w-[906px] mx-auto lg:pb-12 pb-6 w-full flex flex-col gap-3">
         <h5 className="text-center text-base text-white font-medium leading-[22px] tracking-[6px]">
           – BLOG –

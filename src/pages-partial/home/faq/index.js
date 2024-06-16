@@ -7,7 +7,7 @@ import {
 
 export default function FaqSection() {
   return (
-    <section className="w-full border-y border-white/10">
+    <section className="w-full border-y max-w-[1440px] mx-auto border-white/10">
       <div className="lg:py-[120px] lg:px-[160px] py-10 px-3 w-full flex flex-col gap-6">
         <div className="flex lg:flex-row flex-col gap-4 ">
           <div className="lg:w-3/4 w-full space-y-4 flex-1">

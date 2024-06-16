@@ -8,7 +8,7 @@ import {
 
 export default function PartnerSection() {
   return (
-    <section className="w-full border-y border-white/10">
+    <section className="w-full max-w-[1440px] mx-auto border-y border-white/10">
       <div className="md:py-[100px] md:px-[120px] py-8 overflow-x-hidden relative px-14 w-full flex flex-col gap-6 ">
         <h5 className="text-center text-lg text-white">
           Partners in Innnovation

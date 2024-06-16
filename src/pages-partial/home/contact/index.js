@@ -2,7 +2,7 @@ import NewsLetter from "../news-letter";
 
 export default function Contact() {
   return (
-    <div className="relative py-16 lg:py-36 lg:px-[120px] px-4 sm:px-9 space-y-10">
+    <div className="relative py-16 max-w-[1440px] mx-auto lg:py-36 lg:px-[120px] px-4 sm:px-9 space-y-10">
       <div className="relative flex flex-col-reverse lg:flex-row">
         <div className="relative lg:w-3/5 w-full">
           <div>

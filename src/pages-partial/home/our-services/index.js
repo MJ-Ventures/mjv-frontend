@@ -6,7 +6,7 @@ import { services } from "@/components/consts/services";
 
 export default function OurServices() {
   return (
-    <section className="py-12 lg:px-2 px-0" id="services">
+    <section className="py-12 lg:px-2 px-0 max-w-[1440px] mx-auto" id="services">
       <div>
         <h5 className="text-base text-white lg:text-start text-center font-medium lg:leading-[22px] leading-4 tracking-[6px]">
           – OUR SERVICES <span className="lg:hidden inline">–</span>

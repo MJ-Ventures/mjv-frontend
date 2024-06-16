@@ -68,7 +68,7 @@ function BlogsList({ data }) {
 
 function BlogsTabs({ data, itemsPerPage, isLoading }) {
   return (
-    <div className="flex w-full flex-col pt-10 space-y-10 ">
+    <div className="flex w-full max-w-[1440px] mx-auto flex-col pt-10 space-y-10 ">
       {isLoading ? (
         <div className="text-base flex items-center gap-2 mx-auto pb-2">
           {" "}
