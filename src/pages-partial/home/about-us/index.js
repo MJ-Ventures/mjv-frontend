@@ -2,7 +2,7 @@ import { aboutus } from "@/components/consts/about-us";
 
 export default function AboutUs() {
   return (
-    <section className="relative border-b border-white/10" id="about-us">
+    <section className="relative border-b max-w-[1440px] mx-auto border-white/10" id="about-us">
       <div className="relative z-0 ">
         <img src="/images/about-us/1.png" className="lg:h-full h-[412px] bg-cover w-full" />
       </div>

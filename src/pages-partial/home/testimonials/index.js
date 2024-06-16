@@ -2,7 +2,7 @@ import { CommasIcon } from "@/assets/svgs";
 
 export default function Testimonials() {
   return (
-    <section className="md:py-12 py-4 border-b border-white/10">
+    <section className="md:py-12 py-4 max-w-[1440px] mx-auto border-b border-white/10">
       <div className="max-w-[906px] md:px-0 px-3 py-10 pb-24 mx-auto w-full flex flex-col gap-3">
         <h5 className="text-center  text-white text-base font-medium leading-[22px] tracking-[6px]">
           – Testimonials –

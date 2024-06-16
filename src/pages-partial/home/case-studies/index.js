@@ -11,7 +11,8 @@ export default function CaseStudies() {
   const [isEnd, setIsEnd] = useState(false);
 
   return (
-    <div className="py-24 bg-black px-2 text-white">
+    <section className="py-24 bg-black px-2 max-w-[1440px] mx-auto">
+    <div className=" text-white">
       <div className="relative">
         <div>
           <h5 className="text-base md:text-start text-center font-medium leading-[22px] tracking-[6px]">
@@ -122,5 +123,6 @@ export default function CaseStudies() {
         </button>
       </div>
     </div>
+    </section>
   );
 }
