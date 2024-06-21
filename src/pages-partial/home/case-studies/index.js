@@ -25,11 +25,8 @@ export default function CaseStudies() {
             </h5>
             <div className="flex md:flex-row flex-col justify-between items-center mt-4">
               <p className="text-base font-normal md:text-start text-center md:leading-8 leading-6">
-                Our team has spent years building software products for
-                political campaigns and non-profits.{" "}
-                <br className="md:inline hidden" /> We’ve learned, sometimes the
-                hard way, that small orgs need to build smarter tech to stay
-                competitive.{" "}
+              Learn how AI Agents are enpowering organizations to leverage Gen
+              AI to drive effeciency and innovation.
               </p>
               <div className="flex items-center md:pt-0 pt-6 gap-x-8">
                 <div

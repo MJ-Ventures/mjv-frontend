@@ -6,7 +6,7 @@ export default function Hero() {
       <div className="flex items-center gap-3 mx-4 lg:h-[70vh] 2xl:h-[60vh] h-full border-y border-white/5">
         <div className="flex-2 flex flex-col h-full justify-center">
           <p className="md:text-[56px] text-3xl font-semibold md:leading-[55px] lg:leading-[80px] leading-10 text-white uppercase lg:pt-[90px] pt-10 lg:mb-10 mb-2">
-            BUILDING CUSTOM AI AGENTS for
+            BUILDING AI AGENTS for
           </p>
           <div className="h-[50px] lg:hidden block mb-4">
             <TextCounter />

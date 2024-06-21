@@ -5,12 +5,19 @@ import { useEffect, useState } from "react";
 const TextCounter = () => {
   const [items, setItems] = useState(data);
   const [index, setIndex] = useState(4);
+  const [nextIndex , setNextIndex] = useState(0)
   const [isTransitioning, setIsTransitioning] = useState(true);
 
   useEffect(() => {
     const interval = setInterval(() => {
       setIsTransitioning(true);
       setIndex((prevIndex) => prevIndex + 1);
+      setItems((prevItem) => {
+        const tempData = [...prevItem];
+        tempData.push(prevItem[nextIndex]);
+        return tempData;
+      });
+      setNextIndex((prevIndex) => prevIndex + 1 % data?.length);
     }, 2000); // Change text every 2 seconds
     return () => clearInterval(interval);
   }, [index]);
