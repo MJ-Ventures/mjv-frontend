@@ -8,16 +8,15 @@ import {
 export default function FaqSection() {
   return (
     <section className="w-full border-y max-w-[1440px] mx-auto border-white/10">
-      <div className="lg:py-[120px] lg:px-[160px] py-10 px-3 w-full flex flex-col gap-6">
-        <div className="flex lg:flex-row flex-col gap-4 ">
-          <div className="lg:w-3/4 w-full space-y-4 flex-1">
-            <h1 className="md:text-[52px] text-xl lg:text-start text-center uppercase text-white md:leading-[67px] leading-8 font-bold">
+      <div className="max-w-[1120px] lg:py-20 mx-auto py-10 w-full flex flex-col gap-6">
+        <div className="flex lg:flex-row flex-col items-center justify-between">
+          <div className="w-full space-y-4 flex-1">
+            <h1 className="lg:text-5xl text-xl lg:text-start text-center uppercase text-white lg:!leading-[67px] leading-8 font-bold">
               Frequently asked questions ?
             </h1>
-            <p className="uppercase text-center lg:text-start text-lg text-white leading-7">
+            <p className="uppercase text-center lg:text-start text-lg w-[90%] text-white leading-7">
               You’ve got question? <br />
-              Here are some of the answers and answers from{" "}
-              <br className="lg:inline hidden" /> MJV TEAM
+              Here are some of the answers and answers from MJV TEAM
             </p>
             <button className="py-4 my-6 px-14 lg:block hidden text-white rounded-lg bg-[#151515] border border-[#292929]">
               Contact Us
@@ -29,7 +28,7 @@ export default function FaqSection() {
               className="p-5 bg-[#151515] border border-[#292929]"
             >
               <DisclosureButton className="group flex w-full items-center justify-between">
-                <span className="text-xl text-start w-4/5 uppercase font-medium text-white">
+                <span className="text-xl text-start w-[91%] uppercase font-medium text-white">
                   What industries do you specialize in for web development
                 </span>
                 <MinusIcon className="group-data-[open]:inline hidden" />

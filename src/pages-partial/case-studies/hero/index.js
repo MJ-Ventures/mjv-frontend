@@ -12,10 +12,8 @@ export default function CaseStudiesHero() {
               Get Insight Into The Many Possibilities!
             </h1>
             <p>
-              Our team has spent years building software products for political
-              campaigns and non-profits. <br /> We’ve learned, sometimes the
-              hard way, that small orgs need to build smarter tech to stay
-              competitive.
+              Learn how AI Agents are enpowering organizations to leverage Gen
+              AI to drive effeciency and innovation.
             </p>
           </div>
         </div>

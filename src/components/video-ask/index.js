@@ -1,7 +1,9 @@
+import Script from 'next/script'
 export default function VideoAskWidget() {
   return (
     <>
-      <script
+      <Script
+      id='videoask'
         dangerouslySetInnerHTML={{
           __html: `
             window.VIDEOASK_EMBED_CONFIG = {
@@ -19,7 +21,9 @@ export default function VideoAskWidget() {
           `,
         }}
       />
-      <script src="https://www.videoask.com/embed/embed.js"></script>
+      <Script 
+      id='videoask-script'
+      src="https://www.videoask.com/embed/embed.js"></Script>
     </>
   );
 }
