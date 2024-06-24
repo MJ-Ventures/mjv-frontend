@@ -1,15 +1,24 @@
 import moment from "moment";
 import ContentSection from "./content-section";
+import { Spinner } from "@nextui-org/react";
+import { calculateTextAnalysis } from "@/components/utils";
 
-export default function BlogMainSection({ blog }) {
+export default function BlogMainSection({ blog, isLoading }) {
   const tableOfContent = [];
-  const { author, category, content, date, featuredImage, title } = blog;
-  return (
+  const { author, category, content, date, featuredImage, title } = blog || {};
+  if(!content) return
+  const { readingTime } = calculateTextAnalysis(content);
+  return isLoading ? (
+    <div className="text-base flex items-center gap-2 mx-auto pb-2 text-white">
+      {" "}
+      <Spinner color="white" size="md" /> Loading Blog....{" "}
+    </div>
+  ) : (
     <section className="lg:bg-[#151515] bg-transparent">
       <div className="h-full max-w-[1440px] mx-auto">
         <div className="relative w-full">
           <img src={featuredImage} className="w-full bg-cover" />
-          <p className="absolute text-center lg:text-[44px] text-[28px] font-semibold pb-5 blog-gradient bottom-0 w-full">
+          <p className="absolute text-white text-center lg:text-[44px] text-[28px] font-semibold pb-5 blog-gradient bottom-0 w-full">
             {title}
           </p>
         </div>
@@ -97,7 +106,7 @@ export default function BlogMainSection({ blog }) {
               </div>
               <div>
                 <h5 className="text-[#838381] leading-6">Reading Time</h5>
-                <p className="text-white leading-6">10 Mins</p>
+                <p className="text-white leading-6">{readingTime} Mins</p>
               </div>
               <div>
                 <h5 className="text-[#838381] leading-6">Author Name</h5>
@@ -109,7 +118,7 @@ export default function BlogMainSection({ blog }) {
               <ul className="list-disc list-inside py-4 lg:p-0 p-4 space-y-4 lg:rounded-none rounded-md bg-[#151515] lg:bg-transparent">
                 {tableOfContent.map((content, index) => {
                   return (
-                    <li key={index} className="lg:text-base text-sm">
+                    <li key={index} className="lg:text-base text-sm text-white">
                       <a href={`#${content}`} key={index} className="w-full">
                         {content}
                       </a>

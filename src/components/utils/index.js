@@ -1,4 +1,4 @@
-export const transformData = (data) => {
+const transformData = (data) => {
   if (!data?.length) return;
   const transformedData = {};
 
@@ -39,3 +39,48 @@ export const transformData = (data) => {
 
   return result;
 };
+
+const extractText = (data) => {
+  if (!data?.length) return;
+  let text = "";
+
+  data.forEach((section) => {
+    text += section.heading + " ";
+    section.listItems.forEach((item) => {
+      text += item.description + " ";
+    });
+    section.paragraphs.forEach((paragraph) => {
+      text += paragraph + " ";
+    });
+  });
+
+  return text.trim();
+};
+
+const calculateTextAnalysis = (data) => {
+  if (!data) return;
+  const text = extractText(data);
+  const countLetters = (text) => {
+    if (!text) return;
+    const letters = text?.replace(/[^a-zA-Z]/g, "");
+    return letters?.length;
+  };
+
+  const calculateReadingTime = (text) => {
+    if (!text) return;
+    const words = text?.trim().split(/\s+/).length;
+    const wordsPerMinute = 200;
+    const readingTime = Math.ceil(words / wordsPerMinute);
+    return readingTime;
+  };
+
+  const letterCount = countLetters(text);
+  const readingTime = calculateReadingTime(text);
+
+  return {
+    letterCount,
+    readingTime,
+  };
+};
+
+export { transformData, calculateTextAnalysis };

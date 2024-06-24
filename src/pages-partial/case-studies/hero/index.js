@@ -8,7 +8,7 @@ export default function CaseStudiesHero() {
         <div className="max-w-7xl mx-auto flex lg:flex-row flex-col lg:items-center items-start lg:gap-9 gap-4">
           <Logo className="w-44 h-12 lg:block hidden" />
           <LogoSecondary className="lg:hidden block" />
-          <div className="space-y-5">
+          <div className="space-y-5 text-white">
             <h1 className="lg:text-[44px] text-[28px] font-medium lg:leading-[58px] leading-9 tracking-[3%]">
               Get Insight Into The Many Possibilities!
             </h1>

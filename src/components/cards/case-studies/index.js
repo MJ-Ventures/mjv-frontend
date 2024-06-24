@@ -24,7 +24,7 @@ export default function CaseStudiesCard({ content, className, imgClasses }) {
               return (
                 <p
                   key={index}
-                  className="md:py-2.5 md:px-4 p-1 md:text-base text-sm border rounded-md hover:bg-white hover:text-[#292929] cursor-pointer border-white"
+                  className="md:py-2.5 md:px-4 text-white p-1 md:text-base text-sm border rounded-md hover:bg-white hover:text-[#292929] cursor-pointer border-white"
                 >
                   {item}
                 </p>
@@ -36,7 +36,7 @@ export default function CaseStudiesCard({ content, className, imgClasses }) {
           className="flex items-center gap-4 pt-4"
           href={"/case-studies/smart-money-ai"}
         >
-          <p className="text-base leading-8">See Case Study</p>
+          <p className="text-base leading-8 text-white">See Case Study</p>
           <ArrowIcon
             width={16}
             height={16}

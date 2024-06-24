@@ -8,7 +8,7 @@ export default function SimilarBlogSection({ count, className }) {
     <section className={clsx("", className)}>
       <div className="lg:py-12 py-10 px-3 relative border-b border-white/10 max-w-[1440px] mx-auto">
         <div className="flex md:flex-row flex-col gap-4 md:gap-0 bg-transparent justify-between items-center py-6 pb-10">
-          <p className="text-xl">Similar Blog Posts</p>
+          <p className="text-xl text-white">Similar Blog Posts</p>
           <button className="py-3 px-8 rounded-lg text-white bg-transparent border border-[#292929] md:max-w-max w-full">
             <Link
               href="/all-blogs"
