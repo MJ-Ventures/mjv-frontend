@@ -22,7 +22,7 @@ export default function CaseStudies() {
               – OUR CASE STUDIES{" "}
               <span className="md:hidden inline text-base">–</span>
             </h5>
-            <h5 className="font-semibold  md:text-start text-center text-xl md:text-4xl nd:leading-[52px] leading-[30px] text-white mt-3">
+            <h5 className="font-semibold  md:text-start text-center text-xl md:text-4xl md:leading-[52px] leading-[30px] text-white mt-3">
               GET INSIGHT INTO THE MANY POSSIBILITIES!
             </h5>
             <div className="flex md:flex-row flex-col justify-between items-center mt-4">
