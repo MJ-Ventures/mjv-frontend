@@ -2,6 +2,7 @@
 import { ArrowIcon } from "@/assets/svgs";
 import PaginationWrapper from "@/components/pagination-wrapper";
 import { transformData } from "@/components/utils";
+import { baseURL } from "@/components/utils/endpoints";
 import useFetchBlog from "@/hooks/blog";
 import { Spinner, Tab, Tabs } from "@nextui-org/react";
 import moment from "moment";
@@ -50,7 +51,7 @@ function BlogsList({ data }) {
             <div className="md:col-span-3 col-span-12 lg:pt-0 pt-10 flex flex-col justify-center items-end">
               <button className="py-3 px-8 w-full lg:w-auto flex cursor-pointer lg:max-w-max items-center justify-center lg:justify-start rounded-lg text-white bg-[#151515] border border-[#292929]">
                 <Link
-                  href={`${process.env.NEXT_PUBLIC_BASE_URL}/blog${slug}`}
+                  href={`${baseURL}/blog${slug}`}
                   target="_blank"
                   className="flex items-center justify-center gap-1"
                 >

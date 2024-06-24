@@ -1,8 +1,10 @@
+import { baseURL } from "@/components/utils/endpoints";
+
 const useFetchBlog = () => {
   const getBlogs = async () => {
     try {
       const response = await fetch(
-        `${process.env.NEXT_PUBLIC_BASE_URL}/api/get-blogs`
+        `${baseURL}/api/get-blogs`
       );
       const { blogs } = await response.json();
       return blogs;
