@@ -5,7 +5,7 @@ export default function Hero() {
     <section className="max-w-[1440px] mx-auto">
       <div className="flex items-center gap-3 mx-4 lg:h-[70vh] 2xl:h-[60vh] h-full border-y border-white/5">
         <div className="flex-2 flex flex-col h-full justify-center">
-          <p className="md:text-[56px] text-3xl font-semibold md:leading-[55px] lg:leading-[80px] leading-10 text-white uppercase lg:pt-[90px] pt-10 lg:mb-10 mb-2">
+          <p className="md:text-[4.1rem] text-3xl font-semibold md:leading-[55px] lg:leading-[80px] leading-10 text-white uppercase lg:pt-[90px] pt-10 lg:mb-10 mb-2">
             BUILDING AI AGENTS for
           </p>
           <div className="h-[50px] lg:hidden block mb-4">

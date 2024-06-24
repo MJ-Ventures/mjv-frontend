@@ -10,7 +10,7 @@ export default function Blog() {
     <main className="w-full">
       <Header />
       <BlogHeroSection />
-      <AllBlogSection itemsPerPage={3} className='max-w-[1440px] mx-auto' />
+      <AllBlogSection itemsPerPage={3} className='w-full' />
       <BlogSection count={6} />
       <Contact />
       <Footer />

@@ -11,7 +11,7 @@ export default function CaseStudiesCards() {
             <span className="md:hidden inline text-base">–</span>
           </h5>
         </div>
-        <div className="grid grid-cols-2 ">
+        <div className="grid md:grid-cols-2 grid-cols-1">
           {caseStudies.map((ele, index) => {
             return (
               <CaseStudiesCard

@@ -1,24 +1,25 @@
-import { Logo } from "@/assets/svgs";
+import { Logo, LogoSecondary } from "@/assets/svgs";
 import { aboutus } from "@/components/consts/about-us";
 
 export default function CaseStudiesHero() {
   return (
-    <section className="bg-[#151515]">
-      <div className="p-20 space-y-12 max-w-[1440px] mx-auto">
-        <div className="max-w-7xl mx-auto flex items-center gap-9">
-          <Logo className="w-44 h-12" />
+    <section className="lg:bg-[#151515] bg-transparent">
+      <div className="lg:p-20 p-4 pt-14 space-y-12 max-w-[1440px] mx-auto">
+        <div className="max-w-7xl mx-auto flex lg:flex-row flex-col lg:items-center items-start lg:gap-9 gap-4">
+          <Logo className="w-44 h-12 lg:block hidden" />
+          <LogoSecondary className="lg:hidden block" />
           <div className="space-y-5">
-            <h1 className="text-[44px] font-medium leading-[58px] tracking-[3%]">
+            <h1 className="lg:text-[44px] text-[28px] font-medium lg:leading-[58px] leading-9 tracking-[3%]">
               Get Insight Into The Many Possibilities!
             </h1>
-            <p>
+            <p className="text-balance text-sm">
               Learn how AI Agents are enpowering organizations to leverage Gen
               AI to drive effeciency and innovation.
             </p>
           </div>
         </div>
-        <div className="max-w-7xl mx-auto p-6 border border-white/10 rounded-[10px]">
-          <div className="grid grid-cols-4 gap-4">
+        <div className="max-w-7xl mx-auto p-6 bg-[#151515] border border-white/10 rounded-[10px]">
+          <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-4">
             {aboutus.map((element, index) => {
               const { title } = element;
               return (

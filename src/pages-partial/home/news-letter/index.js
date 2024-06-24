@@ -1,6 +1,6 @@
 export default function NewsLetter() {
   return (
-    <div className="bg-[#151515] py-12 px-4 sm:px-8 relative">
+    <div className="bg-[#151515] py-12 px-4 sm:px-8 relative" id="newsletter">
       <h2 className="text-2xl sm:text-3xl pb-4 text-white">
         Subscribe to our Newsletter
       </h2>

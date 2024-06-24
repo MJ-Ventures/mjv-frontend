@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 
 const TextCounter = () => {
   const [items, setItems] = useState(data);
-  const [index, setIndex] = useState(4);
+  const [index, setIndex] = useState(3);
   const [nextIndex , setNextIndex] = useState(0)
   const [isTransitioning, setIsTransitioning] = useState(true);
 
@@ -25,7 +25,7 @@ const TextCounter = () => {
   const getStyle = (idx) => {
     const distance = Math.abs((idx % items.length) - (index % items.length));
     if (distance === 0) {
-      return "lg:text-6xl md:text-4xl text-3xl opacity-100 leading-tight font-semibold";
+      return "lg:text-[4.1rem] md:text-4xl text-3xl opacity-100 leading-tight font-semibold";
     } else if (distance === 1) {
       return "text-4xl text-3xl opacity-50 leading-tight font-semibold";
     } else {
@@ -34,7 +34,7 @@ const TextCounter = () => {
   };
 
   return (
-    <div className="relative h-full nax-w-max overflow-hidden flex flex-col items-start justify-center">
+    <div className="relative h-full overflow-hidden flex flex-col items-start justify-center">
       {items.map((item, idx) => {
         const distance = Math.abs(idx - index);
         const isVisible = distance <= 3; // Check if the item is within 3 positions from the active index

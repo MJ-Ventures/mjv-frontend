@@ -10,8 +10,8 @@ import { useEffect, useState } from "react";
 
 function BlogsHeader() {
   return (
-    <div className="p-6 lg:p-20 bg-[#151515] max-w-[1440px] mx-auto border-y border-[#292929]">
-      <div className="flex flex-col md:flex-row items-start lg:items-center justify-between space-y-4 lg:space-y-0">
+    <div className="p-6 lg:p-20 bg-[#151515] border-y border-[#292929]">
+      <div className="flex flex-col md:flex-row items-start max-w-[1440px] mx-auto lg:items-center justify-between space-y-4 lg:space-y-0">
         <div className="space-y-4">
           <h5 className="lg:text-start text-center text-base font-medium text-white leading lg:leading-[22px] lg:tracking-[6px] tracking-widest">
             – WELCOME TO OUR BLOG <span className="lg:inline hidden">–</span>
@@ -20,13 +20,13 @@ function BlogsHeader() {
             Discover the Wonders of Artificial Intelligence
           </h1>
         </div>
-        <div className="">
+        <Link className="w-full lg:max-w-max" href='/all-blogs'>
           <button className="py-3 px-4 text-base mx-auto lg:px-8 w-full lg:w-auto flex items-center gap-3 rounded-lg text-white bg-[#151515] border border-[#292929]">
             <div className="flex items-center gap-2 mx-auto">
               View All Blogs <ArrowIcon height={10} width={10} />
             </div>
           </button>
-        </div>
+        </Link>
       </div>
     </div>
   );
@@ -38,16 +38,16 @@ function BlogsList({ data }) {
     data?.map((blog, index) => {
       const { date, title, description, slug } = blog;
       return (
-        <article key={index} className="py-10 border-t border-white/10">
+        <article key={index} className="py-10 border-t border-white/10 px-2">
           <div className="max-w-7xl mx-auto grid grid-cols-12">
-            <div className="col-span-9 space-y-3">
+            <div className="md:col-span-9 col-span-12 space-y-3">
               <p className="text-[#838381] text-lg">
                 {moment(date).format("LL")}
               </p>
               <h3 className="text-[22px] text-white">{title}</h3>
               <p className="text-base text-[#838381]">{description}</p>
             </div>
-            <div className="col-span-3 flex flex-col justify-center items-end">
+            <div className="md:col-span-3 col-span-12 lg:pt-0 pt-10 flex flex-col justify-center items-end">
               <button className="py-3 px-8 w-full lg:w-auto flex cursor-pointer lg:max-w-max items-center justify-center lg:justify-start rounded-lg text-white bg-[#151515] border border-[#292929]">
                 <Link
                   href={`${process.env.NEXT_PUBLIC_BASE_URL}/blog${slug}`}

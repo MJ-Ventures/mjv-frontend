@@ -5,16 +5,16 @@ export default function BlogMainSection({ blog }) {
   const tableOfContent = [];
   const { author, category, content, date, featuredImage, title } = blog;
   return (
-    <section className="bg-[#151515]">
+    <section className="lg:bg-[#151515] bg-transparent">
       <div className="h-full max-w-[1440px] mx-auto">
         <div className="relative w-full">
           <img src={featuredImage} className="w-full bg-cover" />
-          <p className="absolute text-center text-[44px] font-semibold pb-5 blog-gradient bottom-0 w-full">
+          <p className="absolute text-center lg:text-[44px] text-[28px] font-semibold pb-5 blog-gradient bottom-0 w-full">
             {title}
           </p>
         </div>
         <div className="grid grid-cols-12 border-y border-white/10">
-          <ContentSection className="col-span-8 border-r border-white/10">
+          <ContentSection className="lg:col-span-8 lg:order-first order-last col-span-12 border-r border-white/10">
             {content?.map((item, index) => {
               const { heading, paragraphs, image, subSections } = item;
               tableOfContent.push(heading);
@@ -83,7 +83,7 @@ export default function BlogMainSection({ blog }) {
               );
             })}
           </ContentSection>
-          <div className="col-span-4 flex flex-col p-14 space-y-10">
+          <div className="lg:col-span-4 col-span-12 flex flex-col lg:p-14 px-4 py-10 space-y-10">
             <div className="grid grid-cols-2 gap-5">
               <div>
                 <h5 className="text-[#838381] leading-6">Publication Date</h5>
@@ -104,13 +104,13 @@ export default function BlogMainSection({ blog }) {
                 <p className="text-white leading-6">{author}</p>
               </div>
             </div>
-            <div className="space-y-3">
+            <div className="lg:space-y-3 space-y-2">
               <h1 className="text-[#838381]">Table Of Contents</h1>
-              <ul className="list-disc list-inside py-4 space-y-4">
+              <ul className="list-disc list-inside py-4 lg:p-0 p-4 space-y-4 lg:rounded-none rounded-md bg-[#151515] lg:bg-transparent">
                 {tableOfContent.map((content, index) => {
                   return (
-                    <li key={index} className="text-base">
-                      <a href={`#${content}`} key={index}>
+                    <li key={index} className="lg:text-base text-sm">
+                      <a href={`#${content}`} key={index} className="w-full">
                         {content}
                       </a>
                     </li>
