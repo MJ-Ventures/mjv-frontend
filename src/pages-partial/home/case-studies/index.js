@@ -5,8 +5,10 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { ArrowIcon } from "@/assets/svgs";
 import { caseStudies } from "@/components/consts/case-studies";
 import CaseStudiesCard from "@/components/cards/case-studies";
+import { useRouter } from "next/navigation";
 
 export default function CaseStudies() {
+  const { push } = useRouter();
   const swiperRef = useRef(null);
   const [activeIndex, setactiveIndex] = useState(0);
   const [isEnd, setIsEnd] = useState(false);
@@ -25,8 +27,8 @@ export default function CaseStudies() {
             </h5>
             <div className="flex md:flex-row flex-col justify-between items-center mt-4">
               <p className="text-base font-normal md:text-start text-center md:leading-8 leading-6">
-              Learn how AI Agents are enpowering organizations to leverage Gen
-              AI to drive effeciency and innovation.
+                Learn how AI Agents are enpowering organizations to leverage Gen
+                AI to drive effeciency and innovation.
               </p>
               <div className="flex items-center md:pt-0 pt-6 gap-x-8">
                 <div
@@ -47,7 +49,7 @@ export default function CaseStudies() {
                 </div>
                 <div
                   onClick={() => {
-                    if (activeIndex !== data?.length - 1) {
+                    if (activeIndex !== caseStudies?.length - 1) {
                       swiperRef?.current?.swiper?.slideNext();
                     }
                   }}
@@ -94,7 +96,10 @@ export default function CaseStudies() {
           })}
         </Swiper>
         <div className="lg:pt-16 pt-8 text-center">
-          <button className="py-3 px-8 w-full lg:max-w-max rounded-lg bg-[#151515] border border-[#292929]">
+          <button
+            className="py-3 px-8 w-full lg:max-w-max rounded-lg bg-[#151515] border border-[#292929]"
+            onClick={() => push("/case-studies")}
+          >
             View all Case Studies
           </button>
         </div>

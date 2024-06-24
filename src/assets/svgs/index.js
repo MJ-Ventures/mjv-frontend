@@ -8,6 +8,7 @@ import ImagePolityIcon from "./image-polity";
 import LayerGroupIcon from "./layer-group-icon";
 import LightBoxIcon from "./light-box";
 import Logo from "./logo";
+import LogoSecondary from "./logo-secondary";
 import MinusIcon from "./minus-icon";
 import MobileIcon from "./mobile-icon";
 import NewsIcon from "./news-icon";
@@ -35,4 +36,5 @@ export {
   PlusIcon,
   NewsIcon,
   ImagePolityIcon,
+  LogoSecondary
 };

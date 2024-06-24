@@ -20,7 +20,7 @@ const PaginationWrapper = ({ data, itemsPerPage, children }) => {
       <div>{children(currentItems)}</div>
       {totalItems ? (
         <div className="border-t border-[#292929]">
-          <div className="max-w-7xl mx-auto flex justify-between items-center py-4">
+          <div className="max-w-7xl mx-auto flex lg:flex-row flex-col lg:gap-0 gap-5 justify-between items-center py-4">
             <p>
               Showing {startIdx + 1} to {Math.min(endIdx, totalItems)} of{" "}
               {totalItems}

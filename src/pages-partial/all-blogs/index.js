@@ -7,7 +7,7 @@ export default function AllBlogs() {
   return (
     <main className="w-full">
       <Header />
-      <AllBlogSection itemsPerPage={8} className="bg-[#151515]" />
+      <AllBlogSection itemsPerPage={8} className="lg:bg-[#151515] bg-transparent" />
       <div className="bg-black max-w-[1440px] mx-auto lg:p-20 p-6">
         <NewsLetter />
       </div>

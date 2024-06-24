@@ -6,7 +6,7 @@ import CaseStudiesMain from "./main";
 
 export default function CaseStudy() {
   return (
-    <main>
+    <main className="w-full">
       <Header />
       <CaseStudiesMain />
       <CaseStudies />
