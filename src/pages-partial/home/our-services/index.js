@@ -1,12 +1,12 @@
-import {
-  ArrowIcon,
-} from "@/assets/svgs";
+import { ArrowIcon } from "@/assets/svgs";
 import { services } from "@/components/consts/services";
-
 
 export default function OurServices() {
   return (
-    <section className="py-12 lg:px-2 px-0 max-w-[1440px] mx-auto" id="services">
+    <section
+      className="py-12 lg:px-2 px-0 max-w-[1440px] mx-auto"
+      id="services"
+    >
       <div>
         <h5 className="text-base text-white lg:text-start text-center font-medium lg:leading-[22px] leading-4 tracking-[6px]">
           – OUR SERVICES <span className="lg:hidden inline">–</span>
@@ -16,14 +16,14 @@ export default function OurServices() {
         </h5>
         <div className="flex justify-between items-center mt-4 lg:px-0 px-3">
           <p className="text-base lg:w-[65%] w-full font-normal lg:text-start text-center text-white lg:leading-8 leading-6">
-            Lorem ipsum dolor sit amet consectetur. Cras leo ornare eget augue.
-            Lacus eget enim cras sollicitudin. Viverra pharetra lorem sit nulla
-            ultrices integer risus. Massa placerat leo vitae accumsan.
+            MJV offers turnkey and custom AI development services to meet the
+            needs and budget of forward-thinking organizations looking to grow
+            and leverage Generative AI technology.
           </p>
         </div>
         <div className="py-4 lg:px-0 px-3">
           <button className="py-3 px-8 lg:max-w-max w-full rounded-lg bg-[#151515] text-white border border-[#292929]">
-            Get a Free Consultation!
+            Let&apos;s Talk!
           </button>
         </div>
       </div>
@@ -39,10 +39,10 @@ export default function OurServices() {
                 <div className="border border-white rounded h-12 w-12 flex items-center justify-center">
                   {icon}
                 </div>
-                <div className="!mt-6 spac-y-3">
+                <div className="!mt-6 space-y-3">
                   <h3 className="text-[28px] text-white">{title}</h3>
                   <p className="mt-2 text-[#EAEAEB]">{description}</p>
-                  <div className="flex items-center gap-4 pt-4">
+                  <div className="flex items-center gap-4 mt-auto">
                     <p className="text-base leading-8 text-white">
                       Get Started
                     </p>
