@@ -22,7 +22,7 @@ export default function OurTeam() {
           so here’s a little bit about us!
         </p>
       </div>
-      <div className="grid lg:grid-cols-5 md:grid-cols-3 grid-cols-2 justify-between md:gap-4 gap-4">
+      <div className="grid lg:grid-cols-5 md:grid-cols-3 grid-cols-1 justify-between md:gap-4 gap-4">
         {team.map((item, index) => {
           const { imgSrc, fullName, designation , linkedinUrl } = item;
           return (
@@ -37,7 +37,7 @@ export default function OurTeam() {
                     <LinkedInIcon />
                   </Link>
                 </p>
-                <p className="md:text-base text-sm lg:leading-6 pt-2 leading-5 text-[#838381]">
+                <p className="text-base lg:leading-6 pt-2 leading-5 text-[#838381]">
                   {designation}
                 </p>
               </div>
