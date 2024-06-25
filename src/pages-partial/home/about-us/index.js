@@ -39,19 +39,14 @@ export default function AboutUs() {
             </h5>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 pt-8 lg:px-0 px-3">
               {aboutus.map((element, index) => {
-                const { title } = element;
+                const { title, description } = element;
                 return (
                   <div
                     key={index}
                     className="py-8 px-6 space-y-4 bg-[#151515] border border-[#292929]"
                   >
                     <h4 className="uppercase text-white">{title}</h4>
-                    <p className="text-[#A5A5A1]">
-                      Lorem ipsum dolor sit amet consectetur. Dignissim dictum
-                      scelerisque dictumst integer purus pharetra felis. Mauris
-                      suspendisse molestie nisl mattis viverra eget tempus nunc
-                      sit. Maecenas augue pellentesque{" "}
-                    </p>
+                    <p className="text-[#A5A5A1]">{description}</p>
                   </div>
                 );
               })}

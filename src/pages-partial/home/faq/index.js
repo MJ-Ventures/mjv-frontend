@@ -1,4 +1,5 @@
-import { ArrowIcon, MinusIcon, PlusIcon } from "@/assets/svgs";
+import { MinusIcon, PlusIcon } from "@/assets/svgs";
+import { disclosureItems } from "@/components/consts/faq";
 import {
   Disclosure,
   DisclosureButton,
@@ -23,71 +24,24 @@ export default function FaqSection() {
             </button>
           </div>
           <div className="flex-1 flex flex-col gap-2">
-            <Disclosure
-              as="div"
-              className="p-5 bg-[#151515] border border-[#292929]"
-            >
-              <DisclosureButton className="group flex w-full items-center justify-between">
-                <span className="text-xl text-start w-[91%] uppercase font-medium text-white">
-                  What industries do you specialize in for web development
-                </span>
-                <MinusIcon className="group-data-[open]:inline hidden" />
-                <PlusIcon className="group-data-[open]:hidden inline" />
-              </DisclosureButton>
-              <DisclosurePanel className="mt-2 text-lg leading-7 text-white">
-                At MJ Ventures, we have extensive experience working with a wide
-                range of industries, including e-commerce, healthcare, finance,
-                education, and non-profits.
-              </DisclosurePanel>
-            </Disclosure>
-            <Disclosure
-              as="div"
-              className="p-5 bg-[#151515] border border-[#292929]"
-            >
-              <DisclosureButton className="group flex w-full items-center justify-between">
-                <span className="text-xl text-start w-4/5 uppercase font-medium text-white">
-                  How long does it typically take to develop a custom web
-                  application?
-                </span>
-                <MinusIcon className="group-data-[open]:inline hidden" />
-                <PlusIcon className="group-data-[open]:hidden inline" />
-              </DisclosureButton>
-              <DisclosurePanel className="mt-2 text-lg leading-7 text-white">
-                Some content here.
-              </DisclosurePanel>
-            </Disclosure>
-            <Disclosure
-              as="div"
-              className="p-5 bg-[#151515] border border-[#292929]"
-            >
-              <DisclosureButton className="group flex w-full items-center justify-between">
-                <span className="text-xl text-start w-4/5 uppercase font-medium text-white">
-                  DO YOU OFFER POST LAUNCH SUPPORT?
-                </span>
-                <MinusIcon className="group-data-[open]:inline hidden" />
-                <PlusIcon className="group-data-[open]:hidden inline" />
-              </DisclosureButton>
-              <DisclosurePanel className="mt-2 text-lg leading-7 text-white">
-                At MJ Ventures, we have extensive experience working with a wide
-                range of industries, including e-commerce, healthcare, finance,
-                education, and non-profits.
-              </DisclosurePanel>
-            </Disclosure>
-            <Disclosure
-              as="div"
-              className="p-5 bg-[#151515] border border-[#292929]"
-            >
-              <DisclosureButton className="group flex w-full items-center justify-between">
-                <span className="text-xl text-start w-4/5 uppercase font-medium text-white">
-                  WILL YOU HELP WITH STRATEGY?
-                </span>
-                <MinusIcon className="group-data-[open]:inline hidden" />
-                <PlusIcon className="group-data-[open]:hidden inline" />
-              </DisclosureButton>
-              <DisclosurePanel className="mt-2 text-lg leading-7 text-white">
-                Some content here.
-              </DisclosurePanel>
-            </Disclosure>
+            {disclosureItems.map((item, index) => (
+              <Disclosure
+                key={index}
+                as="div"
+                className="p-5 bg-[#151515] border border-[#292929]"
+              >
+                <DisclosureButton className="group flex w-full items-center justify-between">
+                  <span className="text-xl text-start w-[91%] uppercase font-medium text-white">
+                    {item.title}
+                  </span>
+                  <MinusIcon className="group-data-[open]:inline hidden" />
+                  <PlusIcon className="group-data-[open]:hidden inline" />
+                </DisclosureButton>
+                <DisclosurePanel className="mt-2 text-lg leading-7 text-white">
+                  {item.content}
+                </DisclosurePanel>
+              </Disclosure>
+            ))}
           </div>
           <div>
             <button className="py-4 my-6 px-14 lg:hidden block w-full text-white rounded-lg bg-[#151515] border border-[#292929]">
