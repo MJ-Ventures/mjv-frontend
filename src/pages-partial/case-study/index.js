@@ -4,11 +4,11 @@ import Footer from "../home/footer";
 import Header from "../home/header";
 import CaseStudiesMain from "./main";
 
-export default function CaseStudy() {
+export default function CaseStudy({ id }) {
   return (
     <main className="w-full">
       <Header />
-      <CaseStudiesMain />
+      <CaseStudiesMain id={id} />
       <CaseStudies />
       <Contact />
       <Footer />

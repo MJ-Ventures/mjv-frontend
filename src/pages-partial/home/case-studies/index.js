@@ -3,11 +3,22 @@
 import React, { useState, useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { ArrowIcon } from "@/assets/svgs";
-import { caseStudies } from "@/components/consts/case-studies";
 import CaseStudiesCard from "@/components/cards/case-studies";
 import { useRouter } from "next/navigation";
+import useFetchCase from "@/hooks/case-studies";
+import { useQuery } from "@tanstack/react-query";
 
 export default function CaseStudies() {
+  const { getCaseStudies } = useFetchCase();
+  const {
+    isPending,
+    error,
+    data: caseStudies,
+  } = useQuery({
+    queryKey: ["allCaseStudies"],
+    queryFn: () => getCaseStudies(),
+  });
+
   const { push } = useRouter();
   const swiperRef = useRef(null);
   const [activeIndex, setactiveIndex] = useState(0);
@@ -67,34 +78,38 @@ export default function CaseStudies() {
             </div>
           </div>
         </div>
-        <Swiper
-          ref={swiperRef}
-          spaceBetween={20}
-          onSlideChange={(e) => {
-            setactiveIndex(e.activeIndex);
-            setIsEnd(e.isEnd);
-          }}
-          className="md:mt-16 mt-6"
-          breakpoints={{
-            768: {
-              slidesPerView: 2,
-              spaceBetween: 10,
-            },
-            1024: {
-              slidesPerView: 3,
-              spaceBetween: 20,
-            },
-          }}
-          slidesPerView={1}
-        >
-          {caseStudies.map((ele, index) => {
-            return (
-              <SwiperSlide key={index}>
-                <CaseStudiesCard content={ele} />
-              </SwiperSlide>
-            );
-          })}
-        </Swiper>
+        {caseStudies?.length ? (
+          <Swiper
+            ref={swiperRef}
+            spaceBetween={20}
+            onSlideChange={(e) => {
+              setactiveIndex(e.activeIndex);
+              setIsEnd(e.isEnd);
+            }}
+            className="md:mt-16 mt-6"
+            breakpoints={{
+              768: {
+                slidesPerView: 2,
+                spaceBetween: 10,
+              },
+              1024: {
+                slidesPerView: 3,
+                spaceBetween: 20,
+              },
+            }}
+            slidesPerView={1}
+          >
+            {caseStudies?.map((ele, index) => {
+              return (
+                <SwiperSlide key={index}>
+                  <CaseStudiesCard content={ele} />
+                </SwiperSlide>
+              );
+            })}
+          </Swiper>
+        ) : (
+          <p>No Case Studies Found.</p>
+        )}
         <div className="lg:pt-16 pt-8 text-center">
           <button
             className="py-3 px-8 w-full lg:max-w-max rounded-lg bg-[#151515] border border-[#292929]"

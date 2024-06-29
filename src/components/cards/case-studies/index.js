@@ -3,7 +3,7 @@ import clsx from "clsx";
 import Link from "next/link";
 
 export default function CaseStudiesCard({ content, className, imgClasses }) {
-  const { title, description, imgSrc, tags } = content;
+  const { title, description, imgSrc, tags , id } = content;
 
   return (
     <article
@@ -13,10 +13,16 @@ export default function CaseStudiesCard({ content, className, imgClasses }) {
       )}
     >
       <div className="flex flex-col md:p-8 p-4 nd:gap-4 gap-5">
-        <img src={imgSrc} className={imgClasses} />
+        <div className="relative">
+          <img
+            src={imgSrc}
+            className={clsx(imgClasses, "rounded-sm h-full w-full bg-contain")}
+            alt={"Image"}
+          />
+        </div>
         <div className="flex flex-col gap-2">
-          <h4 className="text-3xl font-medium leading-8">{title}</h4>
-          <p className="md:text-sm text-xs md:leading-7 leading-5 text-[rgb(234,234,235)]">
+          <h4 className="text-3xl font-medium leading-8 truncate">{title}</h4>
+          <p className="md:text-sm text-xs md:leading-7 leading-5 text-[rgb(234,234,235)] line-clamp-3">
             {description}
           </p>
           <div className="flex flex-wrap gap-2 lg:pt-0 pt-3">
@@ -34,7 +40,7 @@ export default function CaseStudiesCard({ content, className, imgClasses }) {
         </div>
         <Link
           className="flex items-center gap-4 pt-4"
-          href={"/case-studies/smart-money-ai"}
+          href={`/case-studies/${id}`}
         >
           <p className="text-base leading-8 text-white">See Case Study</p>
           <ArrowIcon

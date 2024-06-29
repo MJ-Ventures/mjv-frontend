@@ -1,9 +1,19 @@
 import { ArrowIcon } from "@/assets/svgs";
 import BlogCard from "@/components/cards/blog";
+import useFetchBlog from "@/hooks/blog";
+import { useQuery } from "@tanstack/react-query";
 import clsx from "clsx";
 import Link from "next/link";
 
-export default function SimilarBlogSection({ count, className }) {
+export default function SimilarBlogSection({ category, className }) {
+  const { getBlogs } = useFetchBlog();
+  const { isPending, error, data } = useQuery({
+    queryKey: ["allBlogs"],
+    queryFn: () => getBlogs(),
+  });
+
+  const similarBlogs = data?.filter(item => item.category === category)
+
   return (
     <section className={clsx("", className)}>
       <div className="lg:py-12 py-10 px-3 relative border-b border-white/10 max-w-[1440px] mx-auto">
@@ -19,11 +29,10 @@ export default function SimilarBlogSection({ count, className }) {
           </button>
         </div>
         <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8 items-center">
-          {Array(count)
-            .fill()
-            .map((item, index) => {
-              return <BlogCard key={index} />;
-            })}
+          {similarBlogs?.length ? 
+          similarBlogs?.map((item, index) => {
+              return <BlogCard item={item} key={index} />;
+            }): <p>No Similar Blogs Found.</p>}
         </div>
         <div className="py-12 text-center">
           <button className="py-3 px-8 rounded-lg text-white bg-[#151515] border border-[#292929] lg:max-w-max w-full">
