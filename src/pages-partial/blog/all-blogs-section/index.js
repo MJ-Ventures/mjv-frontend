@@ -5,9 +5,9 @@ import { transformData } from "@/components/utils";
 import { baseURL } from "@/components/utils/endpoints";
 import useFetchBlog from "@/hooks/blog";
 import { Spinner, Tab, Tabs } from "@nextui-org/react";
+import { useQuery } from "@tanstack/react-query";
 import moment from "moment";
 import Link from "next/link";
-import { useEffect, useState } from "react";
 
 function BlogsHeader() {
   return (
@@ -101,24 +101,17 @@ function BlogsTabs({ data, itemsPerPage, isLoading }) {
 
 export default function AllBlogSection({ itemsPerPage, className }) {
   const { getBlogs } = useFetchBlog();
-  const [blogs, setBlogs] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
-
-  useEffect(() => {
-    (async () => {
-      setIsLoading(true);
-      const blogs = await getBlogs();
-      setBlogs(blogs);
-      setIsLoading(false);
-    })();
-  }, []);
+  const { isPending, error, data } = useQuery({
+    queryKey: ["allBlogs"],
+    queryFn: () => getBlogs(),
+  });
 
   return (
     <div className={className}>
       <BlogsHeader />
       <BlogsTabs
-        data={transformData(blogs)}
-        isLoading={isLoading}
+        data={transformData(data)}
+        isLoading={isPending}
         itemsPerPage={itemsPerPage}
       />
     </div>
