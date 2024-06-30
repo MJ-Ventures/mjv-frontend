@@ -1,22 +1,29 @@
 "use client";
 
+import { useState } from "react";
 import useContactForm from "@/hooks/contact";
+import { toast } from "react-toastify";
 
 export default function ContactForm({ className }) {
   const { submitContact } = useContactForm();
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Retrieve the form elements
-    const form = e.target;
-    const firstName = form.elements.firstName.value;
-    const email = form.elements.email.value;
-    const message = form.elements.message.value;
 
-    // Log the values
-    console.log("First Name:", firstName);
-    console.log("Email:", email);
-    console.log("Message:", message);
-    const response = submitContact({ firstName, email, message });
+  const [firstName, setFirstName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      await submitContact({ firstName, email, message });
+      toast.success("Response Submitted!", {
+        theme: "dark",
+      });
+      setFirstName("");
+      setEmail("");
+      setMessage("");
+    } catch (err) {
+      console.log(err, "error");
+    }
   };
 
   return (
@@ -53,6 +60,8 @@ export default function ContactForm({ className }) {
                       name="firstName"
                       placeholder="First Name"
                       className="px-3.5 py-2.5 text-white bg-transparent border border-white/10 rounded-sm outline-none focus:outline-blue-500 placeholder:text-gray-400 placeholder:text-base"
+                      value={firstName}
+                      onChange={(e) => setFirstName(e.target.value)}
                       required
                     />
                   </div>
@@ -72,6 +81,8 @@ export default function ContactForm({ className }) {
                     name="email"
                     placeholder="you@example.com"
                     className="px-3.5 py-2.5 bg-transparent border text-white border-white/10 rounded-sm outline-none focus:outline-blue-500 placeholder:text-gray-400 placeholder:text-base"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
                     required
                   />
                 </div>
@@ -89,7 +100,8 @@ export default function ContactForm({ className }) {
                   rows={4}
                   placeholder="Leave us a message ..."
                   className="px-3.5 py-3 resize-none text-white bg-transparent border border-white/10 rounded-sm outline-none focus:outline-blue-500 placeholder:text-gray-400 placeholder:text-base"
-                  defaultValue=""
+                  value={message}
+                  onChange={(e) => setMessage(e.target.value)}
                   required
                 />
               </div>
