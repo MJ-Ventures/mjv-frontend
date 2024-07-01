@@ -33,13 +33,14 @@ export default function CaseStudies() {
               – OUR CASE STUDIES{" "}
               <span className="md:hidden inline text-base">–</span>
             </h5>
-            <h5 className="font-semibold  md:text-start text-center text-xl md:text-4xl md:leading-[52px] leading-[30px] text-white mt-3">
-              GET INSIGHT INTO THE MANY POSSIBILITIES!
+            <h5 className="font-semibold uppercase  md:text-start text-center text-xl md:text-4xl md:leading-[52px] leading-[30px] text-white mt-3">
+              We help forward thinking orgs <br className="hidden lg:inline-block" /> embed AI Agents across their teams.
             </h5>
             <div className="flex md:flex-row flex-col justify-between items-center mt-4">
-              <p className="text-base font-normal md:text-start text-center md:leading-8 leading-6">
-                Learn how AI Agents are enpowering organizations to leverage Gen
-                AI to drive effeciency and innovation.
+              <p className="md:text-base text-sm font-normal md:text-start text-center md:leading-8 leading-6">
+                Learn how our small team is empowering organizations by
+                leveraging Generative AI with AI Agents to drive efficiency and
+                innovation
               </p>
               <div className="flex items-center md:pt-0 pt-6 gap-x-8">
                 <div

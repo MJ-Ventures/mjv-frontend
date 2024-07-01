@@ -1,12 +1,18 @@
+"use client";
 import { MinusIcon, PlusIcon } from "@/assets/svgs";
 import { disclosureItems } from "@/components/consts/faq";
+import Modal from "@/components/ui/modal";
 import {
   Disclosure,
   DisclosureButton,
   DisclosurePanel,
 } from "@headlessui/react";
+import ContactForm from "../contact/form";
+import { useState } from "react";
 
 export default function FaqSection() {
+  const [open, setOpen] = useState(false);
+
   return (
     <section className="w-full border-y max-w-[1440px] mx-auto border-white/10">
       <div className="max-w-[1120px] lg:py-20 mx-auto py-10 w-full flex flex-col gap-6">
@@ -15,7 +21,9 @@ export default function FaqSection() {
             <h1 className="lg:text-5xl text-xl lg:text-start text-center uppercase text-white lg:!leading-[67px] leading-8 font-bold">
               Frequently Asked Questions
             </h1>
-            <button className="py-4 my-6 px-14 lg:block hidden text-white rounded-lg bg-[#151515] border border-[#292929]">
+            <button className="py-4 my-6 px-14 lg:block hidden text-white rounded-lg bg-[#151515] border border-[#292929]"
+            onClick={() => setOpen(true)}
+            >
               Contact Us
             </button>
           </div>
@@ -46,6 +54,14 @@ export default function FaqSection() {
           </div>
         </div>
       </div>
+      <Modal
+        open={open}
+        setOpen={setOpen}
+        className="bg-black max-w-screen-lg p-10 relative z-50"
+        bgClassName="backdrop-blur-md"
+      >
+        <ContactForm />
+      </Modal>
     </section>
   );
 }

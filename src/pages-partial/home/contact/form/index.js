@@ -38,10 +38,11 @@ export default function ContactForm({ className }) {
           </div>
           <div className="w-full">
             <h2 className="text-[32px] sm:text-[42px] md:text-[52px] md:leading-10 leading-8 lg:leading-[52px] uppercase font-semibold -tracking-[0.02rem] text-white pb-5">
-              Get in touch with us Today
+              Get in Touch
             </h2>
             <p className="text-base sm:text-lg md:text-xl text-white w-full lg:w-[80%]">
-              We work in-person to ensure we are accessible, collaborative and stay as innovative and focused on our work as possible.
+              We work in-person to ensure we are accessible, collaborative and
+              stay as innovative and focused on our work as possible.
             </p>
           </div>
           <form className="w-full lg:w-[80%]" onSubmit={handleSubmit}>
