@@ -3,6 +3,7 @@
 import { useState } from "react";
 import useContactForm from "@/hooks/contact";
 import { toast } from "react-toastify";
+import Image from "next/image";
 
 export default function ContactForm({ className }) {
   const { submitContact } = useContactForm();
@@ -40,8 +41,7 @@ export default function ContactForm({ className }) {
               Get in touch with us Today
             </h2>
             <p className="text-base sm:text-lg md:text-xl text-white w-full lg:w-[80%]">
-              Lorem ipsum dolor sit amet consectetur. Nulla netus porta montes
-              eget laoreet sit vitae.
+              We work in-person to ensure we are accessible, collaborative and stay as innovative and focused on our work as possible.
             </p>
           </div>
           <form className="w-full lg:w-[80%]" onSubmit={handleSubmit}>
@@ -115,10 +115,11 @@ export default function ContactForm({ className }) {
         </div>
       </div>
       <div className="relative flex flex-col w-full lg:w-2/5 justify-center col-span-1 mb-10 lg:mb-0">
-        <img
-          className="relative h-auto lg:h-[80%] bg-contain"
+        <Image
+          className="relative h-full w-full object-cover"
           src="/images/contact/main.jpg"
           alt="Contact Image"
+          layout="fill"
         />
       </div>
     </div>

@@ -13,12 +13,8 @@ export default function FaqSection() {
         <div className="flex lg:flex-row flex-col items-center justify-between">
           <div className="w-full space-y-4 flex-1">
             <h1 className="lg:text-5xl text-xl lg:text-start text-center uppercase text-white lg:!leading-[67px] leading-8 font-bold">
-              Frequently asked questions ?
+              Frequently Asked Questions
             </h1>
-            <p className="uppercase text-center lg:text-start text-lg w-[90%] text-white leading-7">
-              You’ve got question? <br />
-              Here are some of the answers and answers from MJV TEAM
-            </p>
             <button className="py-4 my-6 px-14 lg:block hidden text-white rounded-lg bg-[#151515] border border-[#292929]">
               Contact Us
             </button>

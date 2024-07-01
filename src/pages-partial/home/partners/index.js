@@ -5,6 +5,7 @@ import {
   LightBoxIcon,
   SpheruleIcon,
 } from "@/assets/svgs";
+import Image from "next/image";
 
 export default function PartnerSection() {
   return (
@@ -16,36 +17,76 @@ export default function PartnerSection() {
           </h5>
           <div className="flex xl:justify-between gap-10 lg:animate-none animate-scroll items-center">
             <div className="block">
-              <BoltShiftIcon />
+              <Image
+                src={"/images/partners/venti.svg"}
+                height={42}
+                width={170}
+              />
             </div>
             <div className="block">
-              <LightBoxIcon />
+              <Image
+                src={"/images/partners/bantam.svg"}
+                height={42}
+                width={170}
+              />
             </div>
             <div className="block">
-              <FeatherDevIcon />
+              <Image
+                src={"/images/partners/chicagoscholars.svg"}
+                height={42}
+                width={170}
+              />
             </div>
             <div className="block">
-              <SpheruleIcon />
+              <Image
+                src={"/images/partners/uchicago.svg"}
+                height={42}
+                width={170}
+              />
             </div>
             <div className="block">
-              <GlobalBankIcon />
+              <Image
+                src={"/images/partners/ground.svg"}
+                height={42}
+                width={170}
+              />
             </div>
           </div>
           <div className="md:hidden flex justify-between md:gap-0 gap-10 md:animate-none animate-scroll items-center">
             <div className="block">
-              <LightBoxIcon />
+              <Image
+                src={"/images/partners/bantam.svg"}
+                height={42}
+                width={170}
+              />
             </div>
             <div className="block">
-              <BoltShiftIcon />
+              <Image
+                src={"/images/partners/venti.svg"}
+                height={42}
+                width={170}
+              />
             </div>
             <div className="block">
-              <SpheruleIcon />
+              <Image
+                src={"/images/partners/uchicago.svg"}
+                height={42}
+                width={170}
+              />
             </div>
             <div className="block">
-              <GlobalBankIcon />
+              <Image
+                src={"/images/partners/ground.svg"}
+                height={42}
+                width={170}
+              />
             </div>
             <div className="block">
-              <FeatherDevIcon />
+              <Image
+                src={"/images/partners/chicagoscholars.svg"}
+                height={42}
+                width={170}
+              />
             </div>
           </div>
         </div>

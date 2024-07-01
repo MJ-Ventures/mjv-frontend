@@ -7,9 +7,12 @@ export default function AboutUs() {
       id="about-us"
     >
       <div className="relative z-0 ">
-        <img
-          src="/images/about-us/1.png"
+        <video
+          src={'https://firebasestorage.googleapis.com/v0/b/mjv-landing.appspot.com/o/video%2Fabout.mp4?alt=media&token=f16ef0bc-0b39-420b-9c4e-6e197bc9a7ea'}
           className="lg:h-full h-[412px] bg-cover w-full"
+          autoPlay
+          muted
+          loop
         />
       </div>
       <div className="max-w-screen-lg mx-auto lg:-mt-56 -mt-40 z-10 relative">

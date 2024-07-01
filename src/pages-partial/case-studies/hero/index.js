@@ -21,7 +21,7 @@ export default function CaseStudiesHero() {
         <div className="max-w-7xl mx-auto p-6 bg-[#151515] border border-white/10 rounded-[10px]">
           <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-4">
             {aboutus.map((element, index) => {
-              const { title } = element;
+              const { title, description } = element;
               return (
                 <div
                   key={index}
@@ -29,10 +29,7 @@ export default function CaseStudiesHero() {
                 >
                   <h4 className="uppercase text-white text-xl">{title}</h4>
                   <p className="text-[#A5A5A1] text-sm">
-                    Lorem ipsum dolor sit amet consectetur. Dignissim dictum
-                    scelerisque dictumst integer purus pharetra felis. Mauris
-                    suspendisse molestie nisl mattis viverra eget tempus nunc
-                    sit. Maecenas augue pellentesque{" "}
+                    {description}
                   </p>
                 </div>
               );
