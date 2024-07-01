@@ -95,7 +95,7 @@ export default function Header({ className }) {
           </Popover>
         </div>
       </header>
-      <Modal open={open} setOpen={setOpen} className="bg-black max-w-screen-lg p-10 relative z-50" bgClassName="backdrop-blur-md" >
+      <Modal open={open} setOpen={setOpen} className="bg-black border border-white/10 rounded-md max-w-screen-lg lg:p-10 p-5 relative z-50" bgClassName="backdrop-blur-md" >
         <ContactForm />
       </Modal>
     </>
