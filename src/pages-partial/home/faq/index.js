@@ -1,3 +1,4 @@
+"use client";
 import { MinusIcon, PlusIcon } from "@/assets/svgs";
 import { disclosureItems } from "@/components/consts/faq";
 import { useModal } from "@/providers/modalProvider";
@@ -6,6 +7,8 @@ import {
   DisclosureButton,
   DisclosurePanel,
 } from "@headlessui/react";
+import ContactForm from "../contact/form";
+import { useState } from "react";
 
 export default function FaqSection() {
   const { openModal } = useModal();
@@ -49,6 +52,14 @@ export default function FaqSection() {
           </div>
         </div>
       </div>
+      <Modal
+        open={open}
+        setOpen={setOpen}
+        className="bg-black max-w-screen-lg p-10 relative z-50"
+        bgClassName="backdrop-blur-md"
+      >
+        <ContactForm />
+      </Modal>
     </section>
   );
 }
