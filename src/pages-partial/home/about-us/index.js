@@ -1,6 +1,9 @@
 import { aboutus } from "@/components/consts/about-us";
+import { useModal } from "@/providers/modalProvider";
 
 export default function AboutUs() {
+  const { openModal } = useModal();
+
   return (
     <section
       className="relative border-b max-w-[1440px] mx-auto border-white/10"
@@ -14,6 +17,7 @@ export default function AboutUs() {
           muted
           loop
         />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/100 to-transparent/0" />
       </div>
       <div className="max-w-screen-lg mx-auto lg:-mt-56 -mt-40 z-10 relative">
         <div className="max-w-[906px] m-16 mx-auto w-full flex flex-col gap-3 lg:px-0 px-3">
@@ -56,7 +60,7 @@ export default function AboutUs() {
             </div>
           </div>
           <div className="pb-10 text-center px-3 lg:px-0">
-            <button className="py-3 px-8 lg:max-w-max w-full rounded-lg text-white bg-[#151515] border border-[#292929]">
+            <button onClick={openModal} className="py-3 px-8 lg:max-w-max w-full rounded-lg text-white bg-[#151515] border border-[#292929]">
               Let&apos;s Collaborate
             </button>
           </div>

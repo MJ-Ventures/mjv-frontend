@@ -1,5 +1,6 @@
 import { MinusIcon, PlusIcon } from "@/assets/svgs";
 import { disclosureItems } from "@/components/consts/faq";
+import { useModal } from "@/providers/modalProvider";
 import {
   Disclosure,
   DisclosureButton,
@@ -7,6 +8,8 @@ import {
 } from "@headlessui/react";
 
 export default function FaqSection() {
+  const { openModal } = useModal();
+
   return (
     <section className="w-full border-y max-w-[1440px] mx-auto border-white/10">
       <div className="max-w-[1120px] lg:py-20 mx-auto py-10 w-full flex flex-col gap-6">
@@ -15,7 +18,7 @@ export default function FaqSection() {
             <h1 className="lg:text-5xl text-xl lg:text-start text-center uppercase text-white lg:!leading-[67px] leading-8 font-bold">
               Frequently Asked Questions
             </h1>
-            <button className="py-4 my-6 px-14 lg:block hidden text-white rounded-lg bg-[#151515] border border-[#292929]">
+            <button onClick={openModal} className="py-4 my-6 px-14 lg:block hidden text-white rounded-lg bg-[#151515] border border-[#292929]">
               Contact Us
             </button>
           </div>
@@ -40,7 +43,7 @@ export default function FaqSection() {
             ))}
           </div>
           <div>
-            <button className="py-4 my-6 px-14 lg:hidden block w-full text-white rounded-lg bg-[#151515] border border-[#292929]">
+            <button onClick={openModal} className="py-4 my-6 px-14 lg:hidden block w-full text-white rounded-lg bg-[#151515] border border-[#292929]">
               Contact Us
             </button>
           </div>

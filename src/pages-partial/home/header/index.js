@@ -13,9 +13,10 @@ import { Fragment, useState } from "react";
 import clsx from "clsx";
 import Modal from "@/components/ui/modal";
 import ContactForm from "../contact/form";
+import { useModal } from "@/providers/modalProvider";
 
 export default function Header({ className }) {
-  const [open, setOpen] = useState(false);
+  const {openModal} = useModal();
 
   return (
     <>
@@ -47,7 +48,7 @@ export default function Header({ className }) {
           </div>
           <button
             className="py-3 px-8 text-white rounded-lg md:block hidden bg-[#151515] border border-[#292929]"
-            onClick={() => setOpen(true)}
+            onClick={openModal}
           >
             Contact Us
           </button>
@@ -86,7 +87,7 @@ export default function Header({ className }) {
                 </div>
                 <button
                   className="py-3 px-8 text-white rounded-lg bg-[#151515] border border-[#292929]"
-                  onClick={() => setOpen(true)}
+                  onClick={openModal}
                 >
                   Contact Us
                 </button>
@@ -95,9 +96,6 @@ export default function Header({ className }) {
           </Popover>
         </div>
       </header>
-      <Modal open={open} setOpen={setOpen} className="bg-black max-w-screen-lg p-10 relative z-50" bgClassName="backdrop-blur-md" >
-        <ContactForm />
-      </Modal>
     </>
   );
 }

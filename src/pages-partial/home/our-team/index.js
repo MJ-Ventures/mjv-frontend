@@ -1,8 +1,11 @@
 import LinkedInIcon from "@/assets/svgs/linkedin-icon";
 import { team } from "@/components/consts/team";
+import { useModal } from "@/providers/modalProvider";
 import Link from "next/link";
 
 export default function OurTeam() {
+  const { openModal } = useModal();
+
   return (
     <section
       className="w-full lg:py-12 py-6 max-w-[1440px] mx-auto lg:px-0 px-3 border-b border-white/10"
@@ -46,7 +49,7 @@ export default function OurTeam() {
         })}
       </div>
       <div className="py-12 text-center">
-        <button className="py-3 px-8 lg:max-w-max w-full rounded-lg text-white bg-[#151515] border border-[#292929]">
+        <button onClick={openModal} className="py-3 px-8 lg:max-w-max w-full rounded-lg text-white bg-[#151515] border border-[#292929]">
           Get in Touch
         </button>
       </div>

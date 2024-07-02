@@ -1,6 +1,9 @@
 import { navigation } from "@/components/consts/footer";
+import { useModal } from "@/providers/modalProvider";
 
 export default function Footer() {
+  const { openModal } = useModal();
+
   return (
     <footer className="bg-white">
       <div className="max-w-5xl py-10 lg:py-20 mx-auto px-4">
@@ -8,7 +11,7 @@ export default function Footer() {
           MJ VENTURES IS a company THAT IS inspired by the future
         </p>
         <div className="py-8 lg:py-12 text-center">
-          <button className="py-3 px-10 sm:px-16 rounded-lg text-white bg-[#292929] border border-[#292929]">
+          <button onClick={openModal} className="py-3 px-10 sm:px-16 rounded-lg text-white bg-[#292929] border border-[#292929]">
             Get in Touch
           </button>
         </div>

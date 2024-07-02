@@ -1,6 +1,9 @@
+import { useModal } from "@/providers/modalProvider";
 import TextCounter from "./counter";
 
 export default function Hero() {
+  const { openModal } = useModal();
+
   return (
     <section className="max-w-[1440px] mx-auto">
       <div className="flex items-center gap-3 mx-4 lg:h-[70vh] 2xl:h-[60vh] h-full border-y border-white/5">
@@ -11,7 +14,7 @@ export default function Hero() {
           <div className="h-[50px] lg:hidden block mb-4">
             <TextCounter />
           </div>
-          <button className="py-3 px-8 rounded-lg lg:w-80 w-full bg-white text-black border border-[#292929]">
+          <button onClick={openModal} className="py-3 px-8 rounded-lg lg:w-80 w-full bg-white text-black border border-[#292929]">
             Let&apos;s Discuss
           </button>
         </div>
