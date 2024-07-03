@@ -1,3 +1,4 @@
+'use client'
 import { navigation } from "@/components/consts/footer";
 import { useModal } from "@/providers/modalProvider";
 
