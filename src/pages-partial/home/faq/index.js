@@ -1,4 +1,5 @@
 "use client";
+
 import { MinusIcon, PlusIcon } from "@/assets/svgs";
 import { disclosureItems } from "@/components/consts/faq";
 import { useModal } from "@/providers/modalProvider";

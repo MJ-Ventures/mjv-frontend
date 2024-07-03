@@ -1,4 +1,5 @@
 "use client";
+
 import { ArrowIcon, Logo } from "@/assets/svgs";
 import MenuIcon from "@/assets/svgs/menu-icon";
 import { navMenu } from "@/components/consts/header";

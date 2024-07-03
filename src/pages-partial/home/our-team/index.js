@@ -1,3 +1,5 @@
+'use client';
+
 import LinkedInIcon from "@/assets/svgs/linkedin-icon";
 import { team } from "@/components/consts/team";
 import { useModal } from "@/providers/modalProvider";

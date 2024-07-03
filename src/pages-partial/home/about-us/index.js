@@ -1,3 +1,5 @@
+'use client';
+
 import { aboutus } from "@/components/consts/about-us";
 import { useModal } from "@/providers/modalProvider";
 

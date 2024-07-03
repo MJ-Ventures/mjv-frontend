@@ -1,3 +1,5 @@
+'use client';
+
 import { useModal } from "@/providers/modalProvider";
 import TextCounter from "./counter";
 
