@@ -27,7 +27,7 @@ export default function Footer() {
       </div>
       <div className="max-w-7xl mx-auto pb-10 px-4">
         <div className="pt-8 mt-8 border-t border-white/10 md:flex md:items-center md:justify-between">
-          <div className="flex space-x-6 justify-center md:justify-end md:order-2">
+          {/* <div className="flex space-x-6 justify-center md:justify-end md:order-2">
             {navigation.social.map((item) => (
               <a
                 key={item.name}
@@ -40,7 +40,7 @@ export default function Footer() {
                 <item.icon className="w-6 h-6" aria-hidden="true" />
               </a>
             ))}
-          </div>
+          </div> */}
           <div className="mt-8 md:mt-0 text-base flex flex-col items-center md:flex-row gap-4 justify-center md:justify-start leading-5 text-[#292929] md:order-1">
             <a href="tel:+17737106387" className="font-medium">
               +1 (773) 710-6387

@@ -9,9 +9,40 @@ import 'react-toastify/dist/ReactToastify.css';
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "MJV",
-  description: "MJV Frontend",
+  // Basic SEO
+  title: 'MJ Ventures',
+  description:
+    'An independent development studio. We help forward-thinking organizations overcome their greatest challenges through bespoke Software and Generative AI solutions.',
+  canonical: 'https://mjventures.org/',
+
+  // Open Graph / Facebook metadata
+  openGraph: {
+    title: 'MJ Ventures',
+    description:
+      'An independent developer studio. We help forward-thinking organizations overcome their greatest challenges through bespoke Software and Generative AI solutions.',
+    url: 'https://mjventures.org/',
+    type: 'website',
+    images: [
+      {
+        url: 'https://mjventures.org/img/og.png',
+        width: 1200,
+        height: 630,
+        alt: 'MJ Ventures - Development Studio',
+      },
+    ],
+  },
+
+  // Twitter Card metadata
+  twitter: {
+    card: 'MJV',
+    site: 'https://mjventures.org/',
+    title: 'MJ Ventures - Development Studio',
+    description:
+      'An independent development studio. We help forward-thinking organizations overcome their greatest challenges through bespoke Software and Generative AI solutions.',
+    images: ['https://mjventures.org/img/og.png'],
+  },
 };
+
 
 export default function RootLayout({ children }) {
   return (

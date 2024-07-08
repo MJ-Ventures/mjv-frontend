@@ -1,7 +1,12 @@
+'use client';
+
 import { ArrowIcon } from "@/assets/svgs";
 import { services } from "@/components/consts/services";
+import { useModal } from "@/providers/modalProvider";
 
 export default function OurServices() {
+  const { openModal } = useModal();
+
   return (
     <section
       className="py-12 lg:px-2 px-0 max-w-[1440px] mx-auto"
@@ -34,6 +39,7 @@ export default function OurServices() {
             return (
               <div
                 key={index}
+                onClick={openModal}
                 className="h-full px-5 py-8 rounded-lg shadow-sm bg-center duration-300 outline outline-2 outline-transparent hover:bg-[#484847] cursor-pointer border border-[#292929] hover:outline-gray-200"
               >
                 <div className="border border-white rounded h-12 w-12 flex items-center justify-center">
