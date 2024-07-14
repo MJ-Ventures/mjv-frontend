@@ -39,7 +39,7 @@ export default function Header({ className }) {
                   key={index}
                   className="flex gap-1.5 items-center cursor-pointer"
                 >
-                  <p className="capitalize text-white">
+                  <p className="capitalize font-light text-white">
                     <Link href={link}>{text}</Link>
                   </p>
                   {text === "blog" && <ArrowIcon className="" />}

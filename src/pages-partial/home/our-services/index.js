@@ -13,11 +13,11 @@ export default function OurServices() {
       id="services"
     >
       <div>
-        <h5 className="text-base text-white lg:text-start text-center font-medium lg:leading-[22px] leading-4 tracking-[6px]">
-          – OUR SERVICES <span className="lg:hidden inline">–</span>
+        <h5 className="text-base md:text-start text-center font-regular leading-[16px] tracking-[0px]">
+          Our Services
         </h5>
-        <h5 className="font-semibold lg:text-3xl text-xl lg:text-start text-center md:text-4xl lg:leading-[52px] leading-8 text-white mt-3">
-          HOW WE CAN <br className="lg:inline hidden" /> HELP YOU
+        <h5 className="font-thin  md:text-start text-center text-xl md:text-4xl md:leading-[52px] leading-[30px] text-white mt-3">
+          How we can help you
         </h5>
         <div className="flex justify-between items-center mt-4 lg:px-0 px-3">
           <p className="text-base lg:w-[65%] w-full font-normal lg:text-start text-center text-white lg:leading-8 leading-6">
@@ -28,7 +28,7 @@ export default function OurServices() {
         </div>
         <div className="py-4 lg:px-0 px-3">
           <button className="py-3 px-8 lg:max-w-max w-full rounded-lg bg-[#151515] text-white border border-[#292929]">
-            Let&apos;s Talk!
+            Let&apos;s Talk
           </button>
         </div>
       </div>

@@ -23,16 +23,16 @@ export default function AboutUs() {
       </div>
       <div className="max-w-screen-lg mx-auto lg:-mt-56 -mt-40 z-10 relative">
         <div className="max-w-[906px] m-16 mx-auto w-full flex flex-col gap-3 lg:px-0 px-3">
-          <h5 className="text-center text-base text-white font-medium leading-[22px] tracking-[6px]">
-            – ABOUT US –
-          </h5>
+          {/* <h5 className="text-center text-base text-white font-medium leading-[22px] tracking-[0.5px]">
+            About Us
+          </h5> */}
           <h1 className="text-center text-white md:text-[52px] text-2xl font-semibold md:leading-relaxed leading-0">
             THE MJV STORY{" "}
           </h1>
-          <h5 className="text-center text-base text-white font-medium leading-[22px] tracking-[6px] pb-5">
+          <h5 className="text-center text-base text-white font-thin leading-[22px] tracking-[0.5px] pb-3">
             Outcome Driven | Innovation First | Builder Led
           </h5>
-          <p className="text-center text-base font-normal text-white lg:leading-8 leading-5">
+          <p className="text-center text-base font-light text-white lg:leading-6 leading-5 text-[#919191]">
             MJV exist to help forward thinking organizations embed AI Agents
             across their team. We are a team of interdisciplinary engineers
             laser-focused on supporting our partners in navigating the ongoing

@@ -17,10 +17,10 @@ export default function FaqSection() {
       <div className="max-w-[1120px] lg:py-20 mx-auto py-10 w-full flex flex-col gap-6">
         <div className="flex lg:flex-row flex-col items-center justify-between">
           <div className="w-full space-y-4 flex-1">
-            <h1 className="lg:text-5xl text-xl lg:text-start text-center uppercase text-white lg:!leading-[67px] leading-8 font-bold">
+            <h1 className="lg:text-5xl text-xl lg:text-start text-center text-white lg:!leading-[67px] leading-8 font-thin">
               Frequently Asked Questions
             </h1>
-            <button onClick={openModal} className="py-4 my-6 px-14 lg:block hidden text-white rounded-lg bg-[#151515] border border-[#292929]">
+            <button onClick={openModal} className="py-2 my-2 px-12 lg:block hidden text-white rounded-lg bg-[#151515] border border-[#292929]">
               Contact Us
             </button>
           </div>
@@ -32,13 +32,13 @@ export default function FaqSection() {
                 className="p-5 bg-[#151515] border border-[#292929]"
               >
                 <DisclosureButton className="group flex w-full items-center justify-between">
-                  <span className="text-xl text-start w-[91%] uppercase font-medium text-white">
+                  <span className="text-xl text-start w-[91%] font-light text-white">
                     {item.title}
                   </span>
                   <MinusIcon className="group-data-[open]:inline hidden" />
                   <PlusIcon className="group-data-[open]:hidden inline" />
                 </DisclosureButton>
-                <DisclosurePanel className="mt-2 text-lg leading-7 text-white">
+                <DisclosurePanel className="mt-2 text-lg leading-7 font-semibold text-[#919191]">
                   {item.content}
                 </DisclosurePanel>
               </Disclosure>

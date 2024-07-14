@@ -29,19 +29,19 @@ export default function CaseStudies() {
       <div className=" text-white">
         <div className="relative">
           <div>
-            <h5 className="text-base md:text-start text-center font-medium leading-[22px] tracking-[6px]">
-              – OUR CASE STUDIES{" "}
+            <h5 className="text-base md:text-start text-center font-regular leading-[16px] tracking-[0px]">
+              Our Case Studies{" "}
               <span className="md:hidden inline text-base">–</span>
             </h5>
-            <h5 className="font-semibold uppercase  md:text-start text-center text-xl md:text-4xl md:leading-[52px] leading-[30px] text-white mt-3">
-              We help forward thinking orgs <br className="hidden lg:inline-block" /> embed AI Agents across their teams.
+            <h5 className="font-thin  md:text-start text-center text-xl md:text-4xl md:leading-[52px] leading-[30px] text-white mt-3">
+              We are your trusted partner in building impactful AI products.
             </h5>
             <div className="flex md:flex-row flex-col justify-between items-center mt-4">
-              <p className="md:text-base text-sm font-normal md:text-start text-center md:leading-8 leading-6">
+              {/* <p className="md:text-base text-sm font-normal md:text-start text-center md:leading-8 leading-6">
                 Learn how our small team is empowering organizations by
                 leveraging Generative AI with AI Agents to drive efficiency and
                 innovation
-              </p>
+              </p> */}
               <div className="flex items-center md:pt-0 pt-6 gap-x-8">
                 <div
                   onClick={() => {
