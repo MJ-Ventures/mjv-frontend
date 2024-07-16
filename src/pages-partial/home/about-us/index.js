@@ -8,7 +8,7 @@ export default function AboutUs() {
 
   return (
     <section
-      className="relative border-b max-w-[1440px] mx-auto border-white/10"
+      className="relative border-b  mx-auto border-white/10"
       id="about-us"
     >
       <div className="relative z-0 ">
