@@ -12,7 +12,6 @@ const useFetchCase = () => {
   };
 
   const getSingleCaseStudy = async (id) => {
-    console.log("caseStudy" , id)
     try {
       const response = await fetch(`${baseURL}/api/get-single-case-study/id=${id}`);
       const { caseStudy } = await response.json();
