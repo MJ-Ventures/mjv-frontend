@@ -4,7 +4,7 @@ import { useQuery } from "@tanstack/react-query";
 import { useRouter } from "next/navigation";
 
 export default function CaseStudiesMain({ id }) {
-  const {push} = useRouter()
+  const { push } = useRouter();
   const { getSingleCaseStudy } = useFetchCase();
   const { data } = useQuery({
     queryKey: ["case-study"],
@@ -24,11 +24,11 @@ export default function CaseStudiesMain({ id }) {
     futureDirections,
     marketReception,
     conclusion,
-    error
+    error,
   } = data || {};
 
-  if(error) {
-    push("/case-studies")
+  if (error) {
+    push("/case-studies");
   }
 
   return (
@@ -82,71 +82,99 @@ export default function CaseStudiesMain({ id }) {
             <div className="space-y-4">
               <h4 className="text-[22px] font-semibold text-white">{title}</h4>
               <p>{description}</p>
-              <ul className="list-disc text-base pl-5">
-                {features?.map((feature, index) => (
-                  <li className="text-white" key={index}>{feature}</li>
-                ))}
-              </ul>
+              {features?.length && (
+                <ul className="list-disc text-base pl-5">
+                  {features?.map((feature, index) => (
+                    <li className="text-white" key={index}>
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+              )}
             </div>
-            <div className="space-y-4">
-              <h4 className="text-[22px] font-semibold text-white">Development Journey</h4>
-              {developmentJourney?.map((step, index) => (
-                <div key={index}>
-                  <p className="font-normal text-white">
-                    <span className="font-semibold text-white">
-                      {step.title} <br />
-                    </span>
-                    {step.description}
+            {developmentJourney?.length && (
+              <div className="space-y-4">
+                <h4 className="text-[22px] font-semibold text-white">
+                  Development Journey
+                </h4>
+                {console.log(developmentJourney , "developmentJourney")}
+                {developmentJourney?.map((step, index) => (
+                  <div key={index}>
+                    <p className="font-normal text-white">
+                      <span className="font-semibold text-white">
+                        {step.title} <br />
+                      </span>
+                      {step.description}
+                    </p>
+                    {step.items?.length 
+                     && (
+                      <ul className="list-disc text-base pl-5">
+                        {step.items.map((item, subIndex) => (
+                          <li className="text-white" key={subIndex}>
+                            {item}
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+                  </div>
+                ))}
+              </div>
+            )}
+            {impactStories?.length && (
+              <div className="space-y-4">
+                <h4 className="text-[22px] font-semibold text-white">
+                  Impact and User Stories
+                </h4>
+                <p className="font-normal text-white">
+                  <span className="font-semibold text-white">
+                    Transforming Financial Lives <br />
+                  </span>
+                  Smart Money AI has made a tangible impact on user&apos;s
+                  financial lives, empowering them to take control of their
+                  finances. Here are a few success stories:
+                </p>
+                {impactStories?.map((story, index) => (
+                  <p className="text-white" key={index}>
+                    {story}
                   </p>
-                  {step.items && (
-                    <ul className="list-disc text-base pl-5">
-                      {step.items.map((item, subIndex) => (
-                        <li className="text-white" key={subIndex}>{item}</li>
-                      ))}
-                    </ul>
-                  )}
-                </div>
-              ))}
-            </div>
-            <div className="space-y-4">
-              <h4 className="text-[22px] font-semibold text-white">
-                Impact and User Stories
-              </h4>
-              <p className="font-normal text-white">
-                <span className="font-semibold text-white">
-                  Transforming Financial Lives <br />
-                </span>
-                Smart Money AI has made a tangible impact on user&apos;s
-                financial lives, empowering them to take control of their
-                finances. Here are a few success stories:
-              </p>
-              {impactStories?.map((story, index) => (
-                <p className="text-white" key={index}>{story}</p>
-              ))}
-            </div>
-            <div className="space-y-4">
-              <h4 className="text-[22px] font-semibold text-white">
-                Market Reception and Growth
-              </h4>
-              <p className="font-normal text-white">{marketReception}</p>
-            </div>
-            <div className="space-y-4">
-              <h4 className="text-[22px] font-semibold text-white">Future Directions</h4>
-              <p className="font-normal text-white">
-                <span className="font-semibold text-white">
-                  Enhancements and New Features <br />
-                </span>
-              </p>
-              <ul>
-                {futureDirections?.map((direction, index) => (
-                  <li className="text-white" key={index}>{direction}</li>
                 ))}
-              </ul>
-            </div>
-            <div className="space-y-4">
-              <h4 className="text-[22px] font-semibold text-white">Conclusion</h4>
-              <p className="font-normal text-white">{conclusion}</p>
-            </div>
+              </div>
+            )}
+            {marketReception && (
+              <div className="space-y-4">
+                <h4 className="text-[22px] font-semibold text-white">
+                  Market Reception and Growth
+                </h4>
+                <p className="font-normal text-white">{marketReception}</p>
+              </div>
+            )}
+            {futureDirections?.length && (
+              <div className="space-y-4">
+                <h4 className="text-[22px] font-semibold text-white">
+                  Future Directions
+                </h4>
+                <p className="font-normal text-white">
+                  <span className="font-semibold text-white">
+                    Enhancements and New Features <br />
+                  </span>
+                </p>
+                <ul>
+                  {futureDirections?.map((direction, index) => (
+                    <li className="text-white" key={index}>
+                      {direction}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+            {conclusion && (
+              <div className="space-y-4">
+                <h4 className="text-[22px] font-semibold text-white">
+                  Conclusion
+                </h4>
+                <p className="font-normal text-white">{conclusion}</p>
+              </div>
+            )}
           </div>
         </div>
       </div>
