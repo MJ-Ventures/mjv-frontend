@@ -8,7 +8,8 @@ export async function generateMetadata({ params }) {
   // fetch data
   const res = await fetch(`${baseURL}/api/get-single-blog/slug=${slug}`);
   const { blog } = await res.json();
-  const { title, description, featuredImage } = blog || {};
+  const { metatags } = blog || {};
+  const { title, description, imageSrc } = metatags || {};
 
   return {
     // Basic SEO
@@ -24,7 +25,7 @@ export async function generateMetadata({ params }) {
       type: "website",
       images: [
         {
-          url: featuredImage,
+          url: imageSrc,
           width: 1200,
           height: 630,
           alt: "MJ Ventures",
@@ -38,7 +39,7 @@ export async function generateMetadata({ params }) {
       site: "https://mjventures.org/",
       title: title,
       description: description,
-      images: [featuredImage],
+      images: [imageSrc],
     },
   };
 }
