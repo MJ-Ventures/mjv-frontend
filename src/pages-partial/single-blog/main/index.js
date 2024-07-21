@@ -2,11 +2,12 @@ import moment from "moment";
 import ContentSection from "./content-section";
 import { Spinner } from "@nextui-org/react";
 import { calculateTextAnalysis } from "@/components/utils";
+import ReactPlayer from "react-player";
 
 export default function BlogMainSection({ blog, isLoading }) {
   const tableOfContent = [];
   const { author, category, content, date, featuredImage, title } = blog || {};
-  if(!content) return
+  if (!content) return;
   const { readingTime } = calculateTextAnalysis(content);
   return isLoading ? (
     <div className="text-base flex items-center gap-2 mx-auto pb-2 text-white">
@@ -25,7 +26,14 @@ export default function BlogMainSection({ blog, isLoading }) {
         <div className="grid grid-cols-12 border-y border-white/10">
           <ContentSection className="lg:col-span-8 lg:order-first order-last col-span-12 border-r border-white/10">
             {content?.map((item, index) => {
-              const { heading, paragraphs, image, subSections } = item;
+              const {
+                heading,
+                paragraphs,
+                image,
+                subSections,
+                listItems,
+                videoUrl,
+              } = item;
               tableOfContent.push(heading);
               return (
                 <div
@@ -50,6 +58,22 @@ export default function BlogMainSection({ blog, isLoading }) {
                           >
                             {paragraph}
                           </p>
+                        );
+                      })}
+                    {listItems?.length &&
+                      listItems.map((listItem, index) => {
+                        const { description } = listItem || {};
+                        return (
+                          description && (
+                            <ul className="list-inside list-disc">
+                              <li
+                                key={index}
+                                className="text-base pb-1 text-[#838381] leading-6"
+                              >
+                                {description}
+                              </li>
+                            </ul>
+                          )
                         );
                       })}
                     {subSections &&
@@ -78,6 +102,33 @@ export default function BlogMainSection({ blog, isLoading }) {
                                   </p>
                                 );
                               })}
+                            {listItems?.length &&
+                              listItems.map((listItem, index) => {
+                                const { description } = listItem || {};
+                                return (
+                                  description && (
+                                    <ul className="list-inside list-disc">
+                                      <li
+                                        key={index}
+                                        className="text-base pb-1 text-[#838381] leading-6"
+                                      >
+                                        {description}
+                                      </li>
+                                    </ul>
+                                  )
+                                );
+                              })}
+                            {image && (
+                              <img
+                                src={image}
+                                className="h-full max-w-max max-h-80 mx-auto"
+                              />
+                            )}
+                            {videoUrl && (
+                              <div className="h-full max-w-max mb-10 max-h-80 mx-auto">
+                                <ReactPlayer controls url={videoUrl} />
+                              </div>
+                            )}
                           </div>
                         );
                       })}
@@ -87,6 +138,11 @@ export default function BlogMainSection({ blog, isLoading }) {
                       src={image}
                       className="h-full max-w-max max-h-80 mx-auto"
                     />
+                  )}
+                  {videoUrl && (
+                    <div className="h-full max-w-max mb-10 max-h-80 mx-auto">
+                      <ReactPlayer controls url={videoUrl} />
+                    </div>
                   )}
                 </div>
               );
