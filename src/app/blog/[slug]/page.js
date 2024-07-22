@@ -9,18 +9,20 @@ export async function generateMetadata({ params }) {
   const res = await fetch(`${baseURL}/api/get-single-blog/slug=${slug}`);
   const { blog } = await res.json();
   const { metatags } = blog || {};
-  const { title, description, imageSrc } = metatags || {};
+  const { title, description, imageSrc , keywords } = metatags || {};
 
   return {
     // Basic SEO
     title: title,
     description: description,
     canonical: "https://mjventures.org/",
+    keywords: keywords,
 
     // Open Graph / Facebook metadata
     openGraph: {
       title: title,
       description: description,
+      keywords: keywords,
       url: `https://mjventures.org/blog/${slug}`,
       type: "website",
       images: [
@@ -38,6 +40,7 @@ export async function generateMetadata({ params }) {
       card: "MJV",
       site: "https://mjventures.org/",
       title: title,
+      keywords: keywords,
       description: description,
       images: [imageSrc],
     },
