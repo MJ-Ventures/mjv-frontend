@@ -2,7 +2,12 @@ import moment from "moment";
 import ContentSection from "./content-section";
 import { Spinner } from "@nextui-org/react";
 import { calculateTextAnalysis } from "@/components/utils";
-import ReactPlayer from "react-player";
+import BlogHeadingBlock from "./content-section/heading-block";
+import BlogParagraphBlock from "./content-section/paragraph-block";
+import BlogListItemsBlock from "./content-section/list-items-block";
+import BlogSubSectionBlock from "./content-section/sub-section-block";
+import BlogImageBlock from "./content-section/image-block";
+import BlogVideoBlock from "./content-section/video-block";
 
 export default function BlogMainSection({ blog, isLoading }) {
   const tableOfContent = [];
@@ -41,109 +46,13 @@ export default function BlogMainSection({ blog, isLoading }) {
                   className="py-10 space-y-10 border-b border-white/10"
                 >
                   <div className="max-w-[730px] mx-auto">
-                    {heading && (
-                      <h1
-                        className="text-white text-xl leading-7 font-bold pb-4"
-                        id={heading}
-                      >
-                        {heading}
-                      </h1>
-                    )}
-                    {paragraphs &&
-                      paragraphs.map((paragraph, index) => {
-                        return (
-                          <p
-                            key={index}
-                            className="text-base pb-5 text-[#838381] leading-6"
-                          >
-                            {paragraph}
-                          </p>
-                        );
-                      })}
-                    {listItems?.length &&
-                      listItems.map((listItem, index) => {
-                        const { description } = listItem || {};
-                        return (
-                          description && (
-                            <ul className="list-inside list-disc">
-                              <li
-                                key={index}
-                                className="text-base pb-1 text-[#838381] leading-6"
-                              >
-                                {description}
-                              </li>
-                            </ul>
-                          )
-                        );
-                      })}
-                    {subSections &&
-                      subSections.map((section, index) => {
-                        const { heading, paragraphs } = section;
-                        tableOfContent.push(heading);
-                        return (
-                          <div
-                            key={index}
-                            className="max-w-[730px] mx-auto"
-                            id={heading}
-                          >
-                            {heading && (
-                              <h1 className="text-white text-xl leading-7 font-bold pb-4">
-                                {heading}
-                              </h1>
-                            )}
-                            {paragraphs &&
-                              paragraphs.map((paragraph, index) => {
-                                return (
-                                  <p
-                                    key={index}
-                                    className="text-base pb-5 text-[#838381] leading-6"
-                                  >
-                                    {paragraph}
-                                  </p>
-                                );
-                              })}
-                            {listItems?.length &&
-                              listItems.map((listItem, index) => {
-                                const { description } = listItem || {};
-                                return (
-                                  description && (
-                                    <ul className="list-inside list-disc">
-                                      <li
-                                        key={index}
-                                        className="text-base pb-1 text-[#838381] leading-6"
-                                      >
-                                        {description}
-                                      </li>
-                                    </ul>
-                                  )
-                                );
-                              })}
-                            {image && (
-                              <img
-                                src={image}
-                                className="h-full max-w-max max-h-80 mx-auto"
-                              />
-                            )}
-                            {videoUrl && (
-                              <div className="h-full max-w-max mb-10 max-h-80 mx-auto">
-                                <ReactPlayer controls url={videoUrl} />
-                              </div>
-                            )}
-                          </div>
-                        );
-                      })}
+                    <BlogHeadingBlock heading={heading} />
+                    <BlogParagraphBlock paragraphs={paragraphs} />
+                    <BlogListItemsBlock listItems={listItems} />
+                    <BlogSubSectionBlock subSections={subSections} />
                   </div>
-                  {image && (
-                    <img
-                      src={image}
-                      className="h-full max-w-max max-h-80 mx-auto"
-                    />
-                  )}
-                  {videoUrl && (
-                    <div className="h-full max-w-max mb-10 max-h-80 mx-auto">
-                      <ReactPlayer controls url={videoUrl} />
-                    </div>
-                  )}
+                  <BlogImageBlock image={image} />
+                  <BlogVideoBlock videoUrl={videoUrl} />
                 </div>
               );
             })}

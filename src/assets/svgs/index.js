@@ -1,7 +1,9 @@
 import ArrowIcon from "./arrow-icon";
 import BoltShiftIcon from "./bolt-shift";
 import BulbIcon from "./bulb-icon";
+import CheckIcon from "./check-icon";
 import CommasIcon from "./commas-icon";
+import CopyIcon from "./copy-icon";
 import FeatherDevIcon from "./feather-dev";
 import GlobalBankIcon from "./global-bank";
 import ImagePolityIcon from "./image-polity";
@@ -36,5 +38,7 @@ export {
   PlusIcon,
   NewsIcon,
   ImagePolityIcon,
-  LogoSecondary
+  LogoSecondary,
+  CopyIcon,
+  CheckIcon
 };
