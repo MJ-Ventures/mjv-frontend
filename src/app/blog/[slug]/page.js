@@ -8,7 +8,7 @@ export async function generateMetadata({ params }) {
   // fetch data
   const res = await fetch(`${baseURL}/api/get-single-blog/slug=${slug}`);
   const { blog } = await res.json();
-  const { metatags } = blog || {};
+  const { metatags , featuredImage } = blog || {};
   const { title, description, imageSrc , keywords } = metatags || {};
 
   return {
@@ -27,7 +27,7 @@ export async function generateMetadata({ params }) {
       type: "website",
       images: [
         {
-          url: imageSrc,
+          url: imageSrc ? imageSrc : featuredImage,
           width: 1200,
           height: 630,
           alt: "MJ Ventures",
@@ -42,7 +42,7 @@ export async function generateMetadata({ params }) {
       title: title,
       keywords: keywords,
       description: description,
-      images: [imageSrc],
+      images: [imageSrc ? imageSrc : featuredImage],
     },
   };
 }
