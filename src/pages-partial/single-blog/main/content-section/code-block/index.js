@@ -30,7 +30,14 @@ export default function CodeBlock({ code, language }) {
   return (
     <div className="pb-4 relative">
       <div className="flex pt-3 text-sm justify-between items-center bg-black px-3 rounded-t-2xl">
-        <span className="text-lg px-3">{language}</span>
+        <div className="text-sm px-3 flex items-center gap-2">
+          <div className="flex items-center gap-1">
+            <div className="h-3 w-3 rounded-full bg-red-700"></div>
+            <div className="h-3 w-3 rounded-full bg-yellow-400"></div>
+            <div className="h-3 w-3 rounded-full bg-green-500"></div>
+          </div>
+          ( {language} )
+        </div>
         <div onClick={handleCopy} className="cursor-pointer">
           {copied ? (
             <span className="flex items-center gap-1">
