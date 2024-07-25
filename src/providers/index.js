@@ -4,6 +4,7 @@
 import { NextUIProvider } from "@nextui-org/react";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ModalProvider } from "./modalProvider";
+import { PHProvider } from "./posthog";
 
 const queryClient = new QueryClient();
 
@@ -12,7 +13,7 @@ export function Providers({ children }) {
     <NextUIProvider className="bg-black">
       <QueryClientProvider client={queryClient}>
         <ModalProvider>
-          {children}
+          <PHProvider>{children}</PHProvider>
         </ModalProvider>
       </QueryClientProvider>
     </NextUIProvider>
